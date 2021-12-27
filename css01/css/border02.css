@@ -1,0 +1,46 @@
+@charset "utf-8";
+p{
+    width: 150px; height: 100px;
+    border: 2px; border-style: dotted; border-color:red;
+    margin: 20px;
+
+}
+/*p요소에 가로:150px; 세로:100px;
+보더 단축형으로 굵기 2px 스타일 dotted 칼라 red설정하기
+*/
+.box_a{
+    border-width: 20px  10px 3px 12px;
+    border-color: red blue pink;
+}
+
+/*클래스box_a 에 
+border의 굵기가 각각 
+    top-> 20px 
+    right-> 10px 
+    bottom-> 3px 
+    left-> 12px 로 설정하고
+
+border의 칼라가 
+    top-> red 
+    right,left-> blue 
+    bottom-> pink 
+로 설정하기
+*/
+
+.box_b{
+    border-right-width: 10px;
+    border-style: dotted double;
+    border-color: pink, green, skyblue, yellow;
+}
+
+/*클래스box_b에 
+border의 스타일 
+    top, bottom ->dotted
+    left, right:double
+border의  right 굵기를 10px
+borderdml 칼라
+    top-> pink 
+    right-> green 
+    bottom-> skyblue 
+    left-> yellow 설정한다
+*/

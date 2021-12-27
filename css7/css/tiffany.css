@@ -1,0 +1,260 @@
+@charset "utf-8";
+.hide{
+  width: 0; height: 0;
+  font-size: 0; line-height:0;
+  position:absolute;
+  visibility: hidden;
+}
+#wrap{}
+
+#headerWrap{ 
+  padding: 24px 0;
+  background-color: rgb(129,216,208);
+}
+header{
+  width:1370px;
+  margin: 0 auto;
+  position:relative;
+}
+header>h1{
+  text-align:center;
+}
+header>ul{
+position:absolute;
+right:0; top:0;
+display:flex;}
+
+header>ul>li{
+  padding:0 5px;
+  border-left: 1px solid #fff;
+}
+header>ul>li:first-child{
+  border-left:none;
+}
+header>ul>li>a{
+  font-size:15px;
+  color:#fff;
+}
+/* nav */
+#navWrap{
+  width: 100%;
+  height: 49px;
+  position: absolute;
+  left:0; top:83px;
+  background-color: rgba(255,255,255,0.7);
+}
+#navWrap>div{
+  width:100%;
+  padding: 15px 0;
+  background-color: rgb(255,208,224);
+}
+#navWrap>div>nav{
+  width:1370px;
+  margin: 0 auto;
+  background-color: green;
+}
+#navWrap:hover{height: 300px;}
+#navWrap:hover nav>ul>li>ul{
+  display:block;
+}
+nav>ul{
+  width:1330px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+/* nav>ul>li{
+  flex-grow:1;
+  text-align: center; */
+
+nav>ul>li{
+  position:relative;
+  margin:0 10px;
+}
+nav>ul>li>a{
+  padding: 0 77px;
+  font-size:18px;
+  color:#fff;
+}
+nav>ul>li>ul{
+  position:absolute;
+  left:0; top:54px;
+  width:100%;
+  text-align: center;
+  display: none;
+}
+nav>ul>li>ul>li{
+  border-bottom: 1px dotted #333;
+}
+nav>ul>li>ul>li>a{
+  font-size:21px;
+  line-height:48px;
+  color: black;
+}
+
+/* main */
+main>article{
+  padding-top:49px;
+}
+
+article>h3.box01{
+  height: 440px;
+  background-image:linear-gradient(#def6f2 0%, #5fe1d6 100%)
+}
+
+article>h3.box01>div{
+  width:1370px;
+  margin:0 auto;
+  height:100%;
+  display:flex;
+  align-items:center;
+  background: url('../images/gifts_gifts1_bg1.png') no-repeat left bottom,
+  url('../images/gifts_gifts1_bg2.png') no-repeat right top;
+}
+
+article>h3.box01>div>span{
+  display:block;
+  width:100%;
+  text-align: center;
+  font: bold 79px 'Times new roman',serif;
+  color: #fff;
+  text-shadow:3px 3px 5px rgba(0,0,0,0.7)
+}
+
+section.box01{
+  width:927px;
+  padding: 40px 0;
+  margin: 0 auto;
+  background-color: #666;
+  display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+section.box01 figure{
+  width:215px;
+  background-color: rgb(242,242,242);
+  text-align:center;
+  padding:25px 0 5px;
+/*   color:
+ */}
+
+section.box01 figure img{
+  margin-bottom: 10px;
+  font: bold 17px Arial,sans-serif;
+  text-align: center;
+  color:rgb(102,102,102);
+}
+
+article>h3.box02{
+  background-image:linear-gradient(45deg, rgb(244,230,238) 15% ,rgb(199,191,218) 80%);
+  height: 680px;
+}
+
+/* position 방법~! */
+article>h3.box02>div{
+  width:1370px; height: 100%;
+  margin:0 auto;
+  background: url('../images/gifts_gifts2_bg1.png') no-repeat left top,
+  url('../images/gifts_gifts2_bg2.png') no-repeat right bottom;
+}
+
+article>h3.box02>div>span{
+  display:block;
+  position:absolute;
+  top:50%; left:0;
+  width:100%;
+  margin-top:-39.6px;
+  font:bold 79px/79px 'Times no roman', serif;
+  color:#fff;
+  text-align:center;
+  text-shadow:3px 3px 5px rgba(0,0,0,0.5);
+}
+
+/* flex 방법~! */
+/* article>h3.box02>div{
+  width: 1370px; height:100%;
+  margin: 0 auto;
+  background: url('../images/gifts_gifts2_bg1.png') no-repeat left top,
+  url('../images/gifts_gifts2_bg2.png') no-repeat right bottom;
+  display: flex;
+  align-items:center;
+}
+
+article>h3.box02>div>span{
+  display: block;
+  width:100%;
+  text-align:center;
+  font: bold 79px 'Times new roman', sans-serif;
+  color:#fff;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+} */
+
+section.box02{
+  width:927px;
+  margin:0 auto;
+  padding:40px 0;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+
+}
+section.box02>figure{
+  width:220px;
+  padding-bottom:16px;
+  background-color: #666;
+text-align:center;
+}
+section.box02>figure>img{
+  margin-bottom:16px;
+  color:#666;
+}
+
+#footerWrap{
+  padding:18px 0 26px;
+  background-color:rgb(129,216,208);
+  color:#fff;
+  text-align: center;
+  font-size:12px;
+  }
+
+footer{
+  width:1370px;
+  margin:0 auto;
+
+  }
+
+/* 미치겠구만 흑흑흑 */
+footer>ul{
+  width:221px;
+  margin:0 auto 20px;
+  display:flex;
+justify-content:space-between;
+}
+
+footer>ul>li{
+}
+
+footer>address{
+margin-bottom:5px;
+font-style: normal;
+}
+
+footer>dl{margin-bottom:5px;}
+footer>dl>dt{display: inline;}
+footer>dl>dd{display: inline;}
+
+aside{
+width:50px;
+height:50px;
+background-color: orange;
+text-align:center;
+position:fixed;
+bottom:50px; right:50px;
+box-shadow:3px 3px 5px rgba(0,0,0,0.7);
+}
+
+aside>p>a{
+  color:#fff;
+  line-height:50px;
+}

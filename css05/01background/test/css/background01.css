@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+div{width:840px; margin:0 auto; overflow:hidden;}
+p{	width:398px; 
+	height:198px; border:1px solid #000;
+	margin:20px 10px; float:left;
+	background:url('../images/pic_01.jpg') no-repeat 0 0;}
+
+	.box01{
+		background-position: top 0 left 0;
+	}
+	.box02{
+		background-position: left 157px center;
+	}
+	.box03{
+		background-position: right 0 center;
+	}
+	.box04{
+		background-position: right 50px bottom 24px;
+		/* 요즘 나온 버전은 방향 설정하고 위치 설정하면 됨! */}
+	.box05{
+		background-position: left 58px top 22px; 
+	}
+	.box06{
+		background-position: right 89px center;
+	}
+	.box07{
+		background-position: left 0 center;
+	}
+	.box08{
+		background-position: left 74px bottom 0;
+	}
+	.box09{
+		background-position: left 0 top 25px;
+	}
+	.box10{
+		background-position: right 23px bottom 20px;
+	}
+	.box11{
+		background-position: right 0 top 0;
+	}
+	.box12{
+		background-position: left 55px bottom 0;
+	}

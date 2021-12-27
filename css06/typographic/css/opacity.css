@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* CSS Document */
+body{background:url(../images/alice.gif);}
+section{width:300px; margin:100px auto;}
+p {
+width:200px;
+height:250px;
+padding:20px;
+font-weight:bold;
+margin:20px auto;
+}
+h1{color:#FC3; font-weight:900; text-align:center;}
+/*투명도:40%*/
+p.box01{background-color:#F00;
+			border:10px solid #033;
+			color:#036;
+			}
+/*백그라운드 칼라:rgb(51,102,153)에 투명도 40% */			
+p.box02{
+			border:10px solid #F00;}			
+
+ 
+
+

@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+.hide{
+  width:0; height:0;
+  font-size:0; line-height: 0;
+  position:absolute;
+  visibility:hidden;
+}
+
+article{
+  width:960px;
+  padding:30px 15px 10px;
+  margin: 100px auto;
+  background-color:orange;
+  overflow:hidden;
+}
+
+/* article>ul{} */
+
+article>ul>li{
+  float:left;
+  margin:0 10px 20px;
+  position:relative;
+}
+/* article>ul>li.best{} */
+
+article>ul>li.best>span{
+  position:absolute;
+  top:-10px; left:-10px;}
+
+  article>ul>li>p{
+  position:absolute;
+  left:0; top:0;}

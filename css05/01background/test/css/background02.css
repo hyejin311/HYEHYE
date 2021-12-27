@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+div{width:600px; height:600px;
+	border:2px solid #333;
+background:
+url('../images/sun.png') no-repeat right 53px top 35px,
+url('../images/cloud.png') no-repeat left 187px top 27px,
+url('../images/rabbit.png') no-repeat left 158px bottom 50px, 
+url('../images/tree.png') no-repeat right 35px bottom 53px,
+skyblue;
+}
+/* 먼저 치는 게 위로 올라간다! */

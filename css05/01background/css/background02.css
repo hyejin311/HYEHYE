@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*배경이미지 sun.png  x축 repeat없고 위치: 가로가운데 세로200pxpx 배경칼라 #530b69*/
+p {
+ width: 1200px;
+ margin: 0 auto;
+ border: 5px solid #333;
+background-image:url('../image/sun.png');
+background-repeat:repeat-x;
+background-position:center 200px;
+background-color:#530b69;
+background-attachment: fixed;
+}
+
+/* 오 fixed 신기해~! */

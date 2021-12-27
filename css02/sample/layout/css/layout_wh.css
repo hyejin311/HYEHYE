@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+.hide{
+  font-size: 0; line-height: 0; width: 0; height: 0; position: absolute; visibility: hidden;}
+
+header{
+  background-color: rgb(254,102,203);
+  padding: 30px 0 20px;
+  margin-bottom:10px;}
+
+  header>div{
+    background-color: green;
+    width: 1000px;
+    margin: 0 auto;
+  overflow: hidden;}
+
+    header>div>h1{
+      margin-bottom: 20px;}
+    
+    header>div>h1>a{
+      font: bold 30px '나눔고딕', 'sans-serif';
+      color: #fff;}
+
+      nav{float:right;}
+
+      nav>ul>li{
+        float: left;
+        padding: 0 15px;
+        border-left: 3px solid #fff;}
+
+        nav>ul>li>a{
+          font: 20px '나눔고딕', 'sans-serif';
+          color: #fff;}
+
+        nav>ul>li>a:hover{
+          color: skyblue;
+          background-color: yellow;}
+
+#content{
+  margin: 0 auto 10px;
+  width:1025px;
+  background-color: coral;
+  overflow: hidden;}
+
+  main>article{
+    float:right;
+    box-sizing:border-box;
+    background-color: gray;
+    width: 800px;
+    padding: 30px 10px 20px;}
+
+aside{font:20px; display: block; width:200px;}
+
+  aside>h4{
+    font: bold 23px/ 66px '나눔고딕', 'sans-serif';
+    color:#fff;
+    background-color: rgb(174,16,152);
+    text-align: center;
+    border-top: 5px double #000;
+    border-bottom: 5px double #000;}
+
+    aside>ul>li{
+      border-bottom: 3px solid blue;
+      text-align: center;
+      background-color: rgb(146,68,177);}
+
+    aside>ul>li>a{
+      font: bold 18px/ 44px '나눔고딕', 'sans-serif';
+      color:#fff;}
+
+    article>h3{
+      text-align: center;
+      margin-bottom: 28px;;
+      color: orange;
+      font: 33px '나눔고딕', 'sans-serif';
+      margin-bottom: 30px;}
+
+      main>article>h3>p{margin-bottom: 30px;}
+
+      article p{color: #fff;
+        font: 15px /25px '나눔고딕', 'sans-serif';}
+
+        section.left{float: left; width: 385px;}
+        section.right{float: right; width: 385px;}
+        section.bottom{clear:both;}
+
+        section>h4{
+          margin-bottom:25px;
+          border-top: 5px double #fff;
+          border-bottom: 5px double #fff;
+          text-align: center;
+          font: bold 22px/41px '나눔고딕', 'sans-serif';
+          color: yellowgreen;}

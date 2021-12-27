@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>before after</title>
+<style>
+/* counter-reset 이나 counter-increment 같은 증가 감소값엔 괄호사용 X. */
+
+div{
+	counter-reset:num;
+}
+
+/* content 로 counter(이름) 사용할 땐 ()사용O. */
+p::before{
+	content:'No 'counter(num)':';
+	counter-increment:num;
+}
+	</style>
+</head>
+
+<body>
+<h2>counter</h2>
+
+<div>
+	<p>sample number</p>
+	<p>sample number</p>
+	<p>sample number</p>
+	<p>sample number</p>
+	<p>sample number</p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+div{width:500px; height:300px;
+	border:15px solid rgba(22,22,22,0.5);
+	margin:0 auto 50px;
+	background:url(../images/back.jpg) no-repeat 0 0;}
+
+	/*  가로250  세로 100*/
+.back01{background-size: 250px 100px;}
+
+	/*가로세로: 250*/
+	/* backgroung-size:250px auto */
+.back02{background-size:250px;}
+.back03{background-size:auto 100px;}
+
+	/*75%*/
+	/* %는 사진 본래 크기의 %가 아니고, 화면 border 대비 %로 구현됨. */
+.back04{background-size:75%}
+
+	/*cover*/
+.back05{background-size: cover;}
+
+	/*contain*/
+.back06{background-size: contain;}

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;}
+
+body>div {
+  width: 500px;
+  margin: 0 auto;}
+
+div>h1 {
+  width: 500px;
+  margin: 0 auto 10px;
+  font-size: 20px;
+  color: #666;}
+
+div>section {
+  margin-bottom: 25px;
+  display:flex;
+  flex: nowrap;}
+
+section.box1 {
+  width: 500px;
+  background-color: #bacd44;}
+
+/* width 값 없을 경우 */
+section.box1>div:nth-child(1){flex-grow:1;}
+section.box1>div:nth-child(2){flex-grow:2;}
+section.box1>div:nth-child(3){flex-grow:1;}
+
+section.box2 {
+  width: 500px;
+  background-color: #3deeff;}
+
+section.box2>div{width:100px;}
+
+section.box2>div:nth-child(1){flex-grow: 1;}
+section.box2>div:nth-child(2){flex-grow: 1;}
+section.box2>div:nth-child(3){flex-grow: 1;}
+
+section.box3 {
+  width: 500px;
+  background-color: #3deeff;}
+
+section.box3>div{width:300px;}
+section.box3>div:nth-child(1){flex-shrink: 1;}
+section.box3>div:nth-child(2){flex-shrink: 2;}
+section.box3>div:nth-child(3){flex-shrink: 1;}
+
+section.box4 {background-color: #3deeff;}
+
+section>div{
+  line-height: 45px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;}
+
+section>div:nth-child(1) {background-color: pink;}
+section>div:nth-child(2) {background-color: skyblue;}
+section>div:nth-child(3) {background-color: brown;}
+section>div:nth-child(4) {background-color: yellow;}
+section>div:nth-child(5) {background-color:orange;}

@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+dl, dt,dd{margin:0; padding:0;}
+dl{width:800px;
+font:14px /35px Arial,sans-serif;}
+dt{
+	width:80px; 
+	clear:both;
+	float:left;}
+	

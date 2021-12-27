@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>레이블 사용하기</title>
+</head>
+
+<body>
+<!--폼의 기본 구조 레이블사용하기-->
+<form action="#" method="post">
+<!-- 명시적 -->
+  <fieldset>
+    <legend>명시적레이블</legend>
+    <p>
+      <label for="userId">아이디명</label>
+      <input type="text" id="userId">
+    </p>
+  </fieldset>
+
+  <!-- 암묵적 -->
+  <fieldset>
+    <legend>암묵적레이블</legend>
+    <p>
+<label>남<input type="radio"></label>
+</p>
+
+  </fieldset>
+</form>
+
+</body>
+</html>

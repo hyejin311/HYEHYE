@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+p{width:500px; margin:20px auto 25px;
+	background-color:#FC0;}
+
+/* 클래스 text01 첫줄 들여쓰기 100px*/
+.text01{
+	text-indent: 100px;
+}
+/* 클래스 text02 첫줄 들여쓰기 -100px*/
+.text02{text-indent: -100px;}
+/* 클래스 text03 첫줄 들여쓰기 50%*/
+.text03{text-indent: 50%;}
+
+div{
+	width:300px; height:50px;
+background-color:#666;
+text-indent: -9999px;
+}

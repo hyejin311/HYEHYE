@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hide{
+  width: 0; height: 0;
+  font-size: 0; line-height: 0;
+  position:absolute;
+  visibility: hidden;}
+
+header{
+  padding: 33px 0 16px;
+  margin-bottom: 10px;
+  background-color: #fe66cb;}
+
+header>div{
+  width: 1024px;
+  margin: 0 auto;
+  background-color: green;
+  overflow:hidden;}
+
+header>div>h1{
+  margin-bottom: 18px;}
+  
+header>div>h1>a{
+  font: bold 28px '나눔고딕', 'sans-serif';
+  color: #fff;}
+
+nav{float:right;}
+
+nav>ul>li{
+  float: left;
+  padding: 0 15px;
+  border-left: 1px solid rgb(114, 112, 112);}
+
+nav>ul>li:first-child{
+  border-left:none;}
+
+nav>ul>li>a{
+  font: 15px '나눔고딕','sans-serif';
+  color: #fff;}
+
+nav>ul>li>a:hover{
+  color: yellow;
+  background-color: orange;}
+
+#content{
+  width: 1024px;
+  margin: 0 auto 10px;
+  background-color: coral;
+  overflow: hidden;}
+
+main>article{
+  width: 800px;
+  float: right;
+  padding: 35px 20px 24px;
+  box-sizing: border-box;
+  background-color: #666;}
+
+article>h3{
+  padding: 30px;
+  margin-bottom: 28px;
+  font: 35px '나눔고딕', 'sans-serif';
+  color: #f4bc2b;
+  text-align: center;}
+
+article p{
+margin-bottom: 25px;
+font: 15px/25px '나눔고딕','sans-serif';
+color: #fff;
+text-align: center;}
+
+section>h4{
+  margin-bottom: 22px;
+  font: bold 18px/ 42px '나눔고딕','sans-serif';
+  text-align: center;
+  border-top:5px double #999;
+  border-bottom:5px double #999;
+  color:#d5d20e;}
+
+article>p{
+margin-bottom: 54px;}
+
+section.left{
+  width: 374px;
+  float: left;}
+
+section.right{
+  width: 374px;
+  float: right;}
+
+section.bottom{
+  clear: both;}
+
+aside{
+  width: 200px;
+  float: left;
+  font: 20px
+}
+/* line-height 값 위아래 포함 전체로 */
+/* 예예예^_^ 나 혼자 거의 해냈다 ^_^ */
+aside>h4{
+  border-top: 5px double #351539;
+  border-bottom: 5px double #351539;
+  text-align: center;
+  font: bold 18px/66px Arial, 'sans-serif';
+  color: #fff;
+  background-color: rgb(174,16,152);
+}
+/* aside>ul{} */
+
+aside>ul>li{
+  border-bottom: 1px solid #003466;
+text-align: center;}
+
+aside>ul>li>a:hover{
+  background-color: skyblue;
+  color: orange;}
+
+aside>ul>li>a{
+  display: block;
+  background-color:#9244b1 ;
+  font: bold 17px/44px '나눔고딕','sans-serif';
+  color: #fff;}
+
+footer{
+  width: auto;
+  font: 16px/30px Arial, 'sans-serif';
+  text-align: center;
+  color: #fef032;
+  background-color: #333;}

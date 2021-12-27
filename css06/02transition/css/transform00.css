@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+
+section{width:500px; height:200px; border:#000 solid 1px; margin:100px auto;}
+div{width:100px; height:100px; 
+ background:#69C; color:#fff; font-weight:900; text-align:center; line-height:100px; }
+ 
+ #box_01{
+   transform: translate(200px, 50px);
+ }
+
+ #box_02{
+  /* transform:rotate(45deg); */
+   transform:rotate(90deg);
+   transform-origin:bottom left;
+ }
+
+ #box_03{
+   transform-origin:left top;
+   transform:scale(1.5,1.6);
+ }
+ #box_04{
+   /* transform:skewX(15deg); */
+   transform:skew(15deg,45deg);
+   transform-origin:left top;
+ }
+ #box_05{
+   transform-origin:right bottom;
+   transform: translate(40px ,60px)
+   rotate(15deg)
+   scale(0.5,0.5)
+ }
+ #box_06{
+   transform:translate(100px, 70px)
+   scale(1.2,1.5)
+   skewX(-45deg)
+   rotate(30deg)
+ }

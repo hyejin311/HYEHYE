@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+body,p{margin:0; padding:0;}
+p{width:1000px; height:450px;
+ border:5px solid #333;
+ margin:0 auto 35px;}
+/*배경이미지 background.jpg x축 repeat 위치: 가로35px 세로90px 배경칼라 #9770df*/
+p.back01{
+  background-image:url('../image/background.jpg');
+  background-repeat: repeat-x;
+  background-position: 35px 90px;
+  background-color:powderblue;
+}
+/*배경이미지 float.jpg y축 repeat 위치: 가로150px 세로100px 배경칼라 #982097*/
+p.back02{
+  background-image:url('../image/float.jpg');
+  background-repeat: repeat-y;
+  background-position:150px 100px;
+  background-color:#982097;
+}
+/*배경이미지 float.jpg y축 repeat 위치: 가로150px 세로100px 배경칼라 #982097*/
+
+/*단축형 사용하기*/
+/*배경이미지 rabbit.png  repeat없고 위치: 가로오른쪽 세로아래 배경칼라 #0853c3*/
+p.back03{
+  background: #0853c3 url('../image/rabbit.png') no-repeat right 50px bottom 50px;
+}
+
+/*배경이미지 sun.png  y축 repeat없고 위치: 가로가운데 세로50px 배경칼라 #a226e4*/
+p.back04{
+  background: #a226e4 url('../image/sun.png')
+  repeat-y center 50px;
+}
+  /* background-image:url('../image/sun.png');
+  background-repeat: no-repeat;
+  background-color: #a226e4;
+  background-position: center 50px; */
+  /* background:#a226e4 url('../image/sun.png') repeat-y center 50px ;
+} */
+
+p.back05{
+  background: #666 url('../image/tree.png') no-repeat left 100px top 50px;
+}

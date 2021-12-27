@@ -1,0 +1,41 @@
+@charset "utf-8";
+p{margin:0; padding:0;
+	margin-bottom:25px;}
+.box{
+	width:500px;
+	margin-bottom:25px;
+	border:1px solid #666;}
+.box01{
+	font-size:35px;
+}
+
+
+/*클래스 vertical01 세로 정렬 bottom */
+.vertical01>img{vertical-align: bottom;
+}
+/*클래스 vertical02 세로 정렬 top */
+.vertical02>img{
+	vertical-align: top;
+}
+/*클래스 vertical03 세로 정렬 middle */
+.vertical03>img{
+	vertical-align: middle;
+}
+/*클래스 vertical04 세로 정렬 top */
+.box>span{
+	font-size:35px;
+vertical-align:middle}
+
+.box>small{font-size:10px;}
+
+/*클래스 deco01 윗 줄 만들기 */
+.deco01{text-decoration: overline;}
+/*클래스 deco02 아래 줄 만들기 */
+.deco02{text-decoration: underline;}
+/*클래스 deco03 가운데 줄 만들기 */
+.deco03{text-decoration: line-through;}
+/*클래스 deco04의 자식 a 아래줄 없애기 */
+.deco04>a
+{text-decoration:none;
+color: red
+}

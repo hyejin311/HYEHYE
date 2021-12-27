@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 클래스 tran01  대문자 만들기*/
+.tran01{
+  text-transform: uppercase;
+}
+/* 클래스 tran01  소문자 만들기*/
+.tran02{
+  text-transform: lowercase;
+}
+/* 클래스 tran01  첫글자 대문자 만들기*/
+.tran03{
+  text-transform: capitalize;
+    font-variant: small-caps;
+  }
+/* 클래스 spacing01 자간 3px*/
+.spacing01{
+  /* letter-spacing: -1px; */
+  letter-spacing:3px;
+}
+/* 클래스 spacing02 단어간격 3px*/
+.spacing02{
+  word-spacing: 3px;
+}
+div{
+  width:500px;
+  /* line-height:80px; */
+  font:bold 35px /80px Arial, sans-serif;
+  color:#fff;
+  text-align:center;
+  background-color: orange;
+  letter-spacing: 15px;
+  text-transform:capitalize;
+}

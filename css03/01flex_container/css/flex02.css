@@ -1,0 +1,20 @@
+@charset "UTF-8";
+*{margin:0; padding:0;}
+div{width:80%; margin: 0 auto;}
+
+section.box1{
+   width:500px;
+  background-color:#bacd44;
+  display: inline-flex;
+  flex-direction:row;
+ }
+ section.box2{
+   width:500px;
+   background-color:#3deeff;
+   display: inline-flex;
+   /* flex-direction:row; */
+  }
+
+section>article:nth-child(1){background-color:red;}
+section>article:nth-child(2){background-color:blue;}
+section>article:nth-child(3){background-color:green;}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+table {
+	border-collapse:collapse; 
+	width:500px;
+	border:1px solid #000;}
+td, th { 
+	padding:5px ;
+	border:1px solid #000;}
+
+tr:nth-child(odd){background-color:pink;}
+tr:nth-child(even){background-color:#666;}
+tr:nth-child(4){font-size:30px;}
+tr:nth-child(1){font-size:25px; color:#fff;}
+tr:nth-last-child(1){font-size:35px; color:red;}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>before after</title>
+<style>
+div{
+	counter-reset: num;
+}
+p::before{
+	content:'No ' counter(num) ': ';
+	counter-increment: num;
+}
+</style>
+</head>
+
+<body>
+<h2>counter</h2>
+
+<div>
+	<p>sample number</p>
+	<p>sample number</p>
+	<p>sample number</p>
+	<p>sample number</p>
+	<p>sample number</p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+div{width:800px;height:500px; margin:20px auto;
+	border:3px solid #000;}
+p{width:74px; height:74px; border:1px solid #000;
+	text-align:center; line-height:74px;}
+p.pic01{}	
+p.pic02{}
+p.pic03{}
+p.pic04{}
+p.pic05{}
+p.pic06{}
+p.pic07{}
+p.pic08{}
+p.pic09{}
+p.pic10{}

@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#all{ width:600px; height:400p; background-color:#FF0;}
+.box_01, .box_02{width:100px; height:100px;}
+.box_01{background:#F00;}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">>
+<title>속성 선택자 적용 예</title>
+<style>
+[class^="e"]{color:red;}
+[class$="3"]{background-color:yellow;}
+[class*="s"]{border:1px solid green;}
+/* 공간문자 조심 */
+[class^="t"][class$="1"]{font-size:30px;}
+</style>
+</head>
+<body>
+<div id="layout1">
+	여기는 id="layout1" 입니다.
+    <div class="test11">이 부분은 class="test11" 부분입니다.</div>
+    <div class="est12">이 부분은 class="est12" 부분입니다.</div>
+    <div class="st21">이 부분은 class="st21" 부분입니다.</div>
+</div>
+<div id="ayut2">
+	여기는 id="ayut2" 입니다.
+    <div class="test31">이 부분은 class="test31" 부분입니다.</div>
+    <div class="est13">이 부분은 class="est13" 부분입니다.</div>
+    <div class="st14">이 부분은 class="st14" 부분입니다.</div>
+</div>
+
+</body>
+</html>

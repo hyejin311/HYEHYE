@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+div#wrap{
+  box-sizing: border-box;
+  width:600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(250,206,52);
+}
+
+header{
+background-color: #fff;
+margin-bottom: 20px;
+}
+
+header>h1{
+  text-align: center;
+  /* font-size: normal;
+  font-style: normal;
+  font-family: '맑은 고딕', 'san-serif'; */
+  font: bold 24px/32px '나눔명조' 'serif';
+  color: #f70314;
+}
+
+div#contents{
+margin-bottom: 20px;
+/* 왜 margin 이 아니고 margin-bottom 인가요 */
+background-color: rgb(154,200,27);
+overflow: hidden;
+
+}
+
+#contents>.left{
+  width: 270px;
+  /* height: 240px; */
+  background-color: rgb(24, 130,10);
+  font: 16px/22px '나눔명조' 'serif';
+  text-align: justify;
+  float:left;
+}
+
+#contents>.right{
+  width: 270px;
+  /* height: 240px; */
+  background-color: rgb(160,40,44);
+  font: 16px/22px '나눔명조' 'serif';
+  text-align:justify;
+  float: right;}
+
+footer{
+  clear: both;
+  font: bold 17px/37px '나눔명조', 'serif';
+  text-align:center;
+  background-color: #808080}
+
+    /* footer에는 왜 width가 안 들어가나요 */
+    /* 여기에서는 왜 width 가 auto 일까요 */

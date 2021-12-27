@@ -1,0 +1,55 @@
+/*font연결
+@font-face{
+	font-family:'이름';
+	src:url('../경로/이름.eot') format('embedded-opentype');
+	src:url('../경로/이름.eot') format('embedded-opentype'),
+			url('../경로/이름.woff') format('woff'),
+			url('../경로/이름.ttf') format('truetype'),
+			url('../경로/이름.svg') format('svg');
+								}
+*/
+/*구글연결*/
+@font-face{
+	font-family:'webfont01';
+	src:url('../webfont2dumb.eot') format('embedded-opentype'),
+	url('../webfont/2dumb.ttf') format('truetype'),
+	url('../webfont/2dumb.woff') format('woff'),
+	url('../webfont/3dumb.svg') format('svg');
+}
+@font-face{
+	font-family:'webfont02';
+	src:url('../webfont/3dumb.eot') format('embedded-opentype'),
+	url('../webfont/3dumb.ttf') format('truetype'),
+	url('../webfont/3dumb.woff') format('woff'),
+	url('../webfont/3dumb.svg') format('svg');}
+
+@font-face{
+font-family:'webfont03';
+src:url('../webfont/brush.eot') format('embedded-opentype'),
+url('../webfont/brush.ttf') format('truetype'),
+url('../webfont/brush.woff') format('woff'),
+url('../webfont/brush.svg') format('svg');
+}
+
+@font-face{
+	font-family:'webfont04';
+	src:url('../webfont/yesterday.eot') format('embedded-opentype'),
+	url('../webfont/yesterday.ttf') format('truetype'),
+	url('../webfont/yesterday.woff') format('woff'),
+	url('../webfont/yesterday.svg') format('svg');
+
+}
+
+p{margin-bottom:20px; font-size:4em;}
+
+/*2dumbregular*/
+.font01{font-family: 'Nanum Pen Script',cursive;}
+/*3dumbregular*/
+.font02{font-family: 'Nanum Pen Script', cursive;}
+/*brushregular*/
+.font03{font-family: 'Nanum Pen Script', cursive;}
+/*yesterdays*/
+.font04{font-family:'webfont04',serif;}
+/*구글폰트 */
+.font05{font-family: 'Nanum Pen Script', cursive;}
+/*구글폰트*/

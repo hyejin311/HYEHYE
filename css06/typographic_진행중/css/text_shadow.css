@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+
+div{margin:30px 0 0 30px; 
+	font:bold 50pt Arial, Helvetica, sans-serif; color:#066; }
+div.box{width:100px; height:100px; background:#ccc; font-size:15px;}	
+
+/*박스 그림자 만들기*/
+
+
+/*밖의 그림자 만들기*/
+
+
+/*밖의 그림자 만들기:역방향 만들기*/
+
+
+/*안의 그림자 만들기*/
+
+
+/*안의 그림자 만들기:역방향 만들기*/
+
+
+
+
+/*x:10px, y:10px, blur:8px, 칼라:#F30*/	
+
+
+/*x:3px, y:3px, blur:없애기, 칼라:rgba(102,51,204,0.7)*/	
+
+
+/*여러가지 그림자 한꺼번에 넣기*/
+
+
+/*무지개 만들기*/
+
+/*연습하기*/
+div.box_09{}
+div.box_10{}
+
+
+
+
+
+
+
+
+

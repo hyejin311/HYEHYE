@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+dl, dt,dd{margin:0; padding:0;}
+dl{width:800px;
+font:14px /35px Arial,sans-serif;}
+dt{
+	width:80px; 
+	clear:both;
+	float:left;}
+
+dt:nth-child(1){background-color:red;}
+dt:nth-child(3){background-color:green;}
+dt:nth-child(5){background-color:yellow;}
+dt:nth-child(7){background-color:blue;}
+dt:nth-child(9){background-color:#666;}
+
+dd:nth-of-type(1){color:red;}
+dd:nth-of-type(2){color:green;}
+dd:nth-of-type(3){color:yellow;}
+dd:nth-of-type(4){color:blue;}
+dd:nth-of-type(5){color:gray;}
+
+dd:nth-last-of-type(1){font-size:35px; background-color:yellow;}

@@ -1,0 +1,51 @@
+@charset "utf-8";
+@keyframes ani{
+  0%{
+    transform:rotateX(0deg) rotateY(0deg) rotateX(0deg);
+  }
+  100%{
+    transform:rotateX(360deg) rotateY(360deg) rotateX(360deg);
+  }
+}
+section{
+  width:200px; height:200px;
+  position:relative;
+  margin: 50px auto 0;
+  /* background-color:#666; */
+  perspective: 1000px;
+  animation:3s linear infinite ani;
+  transform-style: preserve-3d;
+}
+section>div{
+  position:absolute;
+  left:0; top:0;
+  width:200px; height:200px;
+  opacity:0.4;
+}
+/* 옆면 */
+section>div:nth-child(1){
+  transform: rotateY(90deg) translate3d(0px,0px,100px);
+  background-color:green;
+}
+section>div:nth-child(2){
+  transform: rotateY(270deg) translate3d(0px,0px,100px);
+  background-color:blue;
+}
+section>div:nth-child(3){
+  transform:rotateX(90deg) translate3d(0px,0px,100px);
+  background-color:yellow;
+}
+section>div:nth-child(4){
+  transform:rotateX(270deg) translate3d(0px,0px,100px);
+  background-color:pink;
+}
+
+/*  앞뒤 */
+section>div:nth-child(5){
+  transform:rotateX(0deg) translate3d(0px,0px,100px);
+  background-color:red;
+}
+section>div:nth-child(6){
+  transform:rotateY(180deg) translate3d(0px,0px,100px);
+  background-color:#666;
+}

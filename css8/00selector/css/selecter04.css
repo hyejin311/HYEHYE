@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+dl, dt,dd{margin:0; padding:0;}
+dl{width:800px;
+font:14px /35px Arial,sans-serif;}
+dt{
+	width:80px; 
+	clear:both;
+	float:left;}
+
+dd{width:720px; float:right;background-color:yellow;}
+
+dt:nth-child(1){background-color:orange;}
+/* 평소엔 보이지 않고, 드래그해서 선택하면 나오는 기능 
+우왕 신기하다*/
+
+::selection{background-color:forestgreen;}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+div{width:500px; height:500px;
+	border:2px solid #333;
+	background:
+	url('../image/checkBox.png') repeat-x left top,
+	url('../image/checkbox1.png') repeat-y right top,
+	url('../image/checkBox2.png') repeat-x left bottom,
+	url('../image/checkBox3.png') repeat-y left top,
+	url('../image/checkBox4.png') no-repeat center,
+	#333;
+}

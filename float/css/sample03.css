@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* reset */
+/*  block */
+
+/* *{
+  margin: 0; padding:0;
+  font-size:1em;
+  line-height:1em;
+  font-weight:normal;
+} */
+/* body, div,header,section,footer,h1{
+  margin: 0; padding:0;
+  font-size:1em;
+  line-height:1em;
+  font-weight:normal;
+} */
+
+/* layout */
+div#wrap{
+  width:600px;
+  padding:20px;
+  margin: 0 auto;
+  box-sizing:border-box;
+  background-color:#face3e;
+}
+/* header */
+header{
+  /* width:auto; */
+  margin-bottom:20px;
+  background-color:#fff;
+}
+header>h1{
+  /* width:auto; */
+  font:bold 24px/32px '나눔명조',serif;
+  color:#f70314;
+  text-align:center;
+}
+/* contents */
+div#contents{
+  /* width:auto; */
+  margin-bottom:20px;
+  background-color:#9acf1b;
+  overflow:hidden;
+}
+div#contents>.left{
+width:270px;
+float:left;
+font: 16px/22px '나눔명조',serif;
+text-align:justify;
+background-color:#18820a;
+}
+div#contents>.right{
+width:270px;
+float:right;
+font:16px/22px '나눔명조',serif;
+text-align:justify;
+background-color:#a0282c;
+}
+/* footer */
+footer{
+  clear:both;
+  /* width:auto; */
+  font: bold 17px/37px '나눔명조',serif;
+  text-align:center;
+  background-color:#808080;
+}
