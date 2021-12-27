@@ -1,39 +1,30 @@
 @charset "utf-8";
 
 ul{
-  width:200px;
-  background-color: rgb(102,102,102);
-  margin: 40px auto 0;
-}
+  background-color: #666;
+  margin:40px auto 0;
+  width:200px;}
 
-ul>li{
-  height:64px;
-  position:relative;
-}
+  /* 왜 이건 안되지 */
+  ul>li{
+    height:64px;
+    position:relative; left:0; top:0;
+    background: rgb(102,102,102) url('../ex/img/icons.png') no-repeat right 0 top 0;
+    border-radius:0 45px 45px 0;
+    opacity:0.6;}
 
-ul>li>a{
-  font:bold 14px/64px '나눔고딕',sans-serif;
-  color:white;
-  text-indent:25px;
-  position:absolute; left:0; top:0;
-  background: rgb(102,102,102) url('../ex/img/icons.png') no-repeat right 0;
-  opacity:0.7;
-  width:200px;
-  height:64px;
-  border-radius:0 45px 45px 0;
-}
+    ul>li:hover{width:250px; height:64px;
+    opacity:1;
+    transition:all ease-in-out;
+    font-weight: bold;
+    font-size:30px;}
 
-ul>li>a:hover{
-  transition: all 1s ease-in-out;
-  font-size: 20px;
-  width:250px; height:64px;
-  z-index:999;
-  color:#fff;
-  opacity:1;
-}
+    ul>li>a{
+      color:white;
+      font: bold 14px/ 64px '나눔고딕',sans-serif;
+      position:absolute;
+      text-indent:15px;}
 
-ul>li:nth-child(1)>a:hover{background-color:orange}
-ul>li:nth-child(2)>a:hover{background-color:palegreen}
-ul>li:nth-child(3)>a:hover{background-color:rebeccapurple}
-ul>li:nth-child(4)>a:hover{background-color:royalblue}
-ul>li:nth-child(5)>a:hover{background-color:salmon}
+      ul>li:nth-child(1)>a:hover{
+        background-color: red;
+      }

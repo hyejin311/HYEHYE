@@ -9,5 +9,6 @@ td, th {
 	padding:5px ;
 	border:1px solid #000;}
 
-tr:nth-child(3){background-color:pink;}
-tr:nth-of-type(5){font-size:10px;}
+tr:nth-child(odd){background-color:pink;}
+tr:nth-child(even){color:pink;}
+/* nth-child 사용 시, 선택자가 부모 기준임. 따라서 tr 선택자로 설정 시, 첫번째 tr이 선택되고 td 선택자 설정 시 모든 자식요소의 첫번째 td가 선택됨.  */
