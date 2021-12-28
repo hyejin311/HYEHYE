@@ -1,9 +1,36 @@
 @charset "utf-8";
 /* CSS Document */
+p{
+  width:180px;
+  height:180px;
+  position:fixed;}
 
-p{width:180px; height:180px;
-  position: fixed;}
-.box_01{background-color:red;}
-.box_02{background-color:green;}
-.box_03{background-color:orange;}
-.box_04{background-color:pink;}
+  .box_01{
+    width:100px;
+    height:100px;
+    left:100px; top:100px;
+    z-index:100;
+    opacity:0.7;
+    background-color: red;;}
+
+    .box_02{
+      width:100px;
+      height:100px;
+      left:150px; top:150px;
+      background-color: orange;
+      z-index: 300;
+      opacity:0.8;}
+
+      .box_03{
+        width:100px; height:100px;
+        left:200px; top:200px;
+        z-index:700;
+        opacity:0.9;
+        background-color:yellow;}
+
+        .box_04{
+          background-color:green;
+          width:100px; height:100px;
+          z-index:999;
+          opacity:1;
+          left:250px; top:250px;}

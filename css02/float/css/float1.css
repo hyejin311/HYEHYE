@@ -2,10 +2,13 @@
 /* CSS Document */
 p{width:250px; height:250px;
 	padding:0; margin:0;}
-div{	width:1000px;
-		height:300px;
-		border:10px solid #000;
-		margin-bottom:300px; }
+
+div
+{width:1000px;
+height:300px;
+border:10px solid #000;
+margin-bottom:100px;}
+
 p.box01{background:red;}		
 p.box02{background:yellow;}	
 p.box03{background:green;}	
@@ -19,46 +22,44 @@ float: left;
 margin-right: 150px;
 }
 div#boxA>.box03{
-	float: right;
-}
+	float: right;}
 
-div#boxB>.box01{
-	float: right;
-}
-div#boxB>.box02{
-	float: left;
-	margin-left: 50px;
+/* B */
+div#boxB>.box01
+{float: right;}
 
-}
-div#boxB>.box03{
-	float: right;
-	margin-right: 50px;
-}
+div#boxB>.box02
+{float: left;
+margin-right:50px;}
 
-div#boxC>.box01{
-	width: auto;
-	float: left;
-}
-div#boxC>.box02{
-	width: auto;
-	float: left;
-}
-div#boxC>.box03{
-	width: auto;
-	float: left;
-}
+div#boxB>.box03
+{float: right;
+margin-right: 50px;}
 
-div#boxD{
-	height: auto;
-	overflow:hidden;
-}
-div#boxD>.box01{
-	float: left;
-}
-div#boxD>.box02{
-	float: right;
-}
-div#boxD>.box03{
-	float: left;
-}
+/* C */
+div#boxC>.box01
+{width: auto;
+float: left;}
 
+div#boxC>.box02
+{width: auto;
+float: left;}
+
+div#boxC>.box03
+{width: auto;
+float: left;}
+/* width:auto 하고 float 하면 짜부러짐 */
+
+/* D */
+div#boxD
+{height: auto;
+overflow:hidden;}
+
+div#boxD>.box01
+{float: left;}
+
+div#boxD>.box02
+{float: right;}
+
+div#boxD>.box03
+{float: left;}

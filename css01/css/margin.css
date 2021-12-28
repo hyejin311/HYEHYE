@@ -1,17 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
-p{	height: 250px;
-	width:250px;}
-.box_01 {
+p{height: 250px; width:250px;}
+
+.box_01{
 background-color: #990;
-margin-bottom: 100px;
-}
+margin-bottom: 100px;}
+
 .box_02 {
 background-color: #C00;
-margin-top: 150px;
-}
+margin-top: 150px;}
+
 .box_03 {
 	background-color: #F90;
-	margin-top: 150px;
-}
+	margin-top: 150px;}

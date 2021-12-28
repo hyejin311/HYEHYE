@@ -3,24 +3,18 @@
 
 /* 가로: 500px 세로 300px 만들기 안의 여백 200px 보더 10px solid #000 만들기 */
 .box01{
-  border-width: 500px 300px;
-  padding: 200px;
-  border: 10px;
-  border-style: solid;
-
-  /* box-sizing:content-box; */
-  /* width: 500px;
-  height: 300px; */
-  width: 440px;
-  height: 220px;
-  /*  top bottom right left-> 같은 값 생략 */
-  /* padding:20px 20ㅔㅌ 20ㅔㅌ 20ㅔㅌ; */
+  width: 500px; height: 300px;
   padding: 20px;
   border-width: 10px;
   border-style: solid;
-  border-color: #000;
+  border-color:#000;
 }
-
+  /* box-sizing:content-box; */
+  /* width: 500px;
+  height: 300px; */
+  
+  /*  top bottom right left-> 같은 값 생략 */
+  /* padding:20px 20px 20px 20px; */
 
 /* 
 box-sizing을 이용하여
@@ -31,5 +25,4 @@ padding: 200px;
 border: 10px;
 border-style: solid;
 border-color: #000;
-box-sizing: border-box;
-}
+box-sizing: content-box;}

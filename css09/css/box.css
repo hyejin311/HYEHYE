@@ -1,12 +1,11 @@
 @charset "utf-8";
 @keyframes ani{
   0%{
-    transform:rotateX(0deg) rotateY(0deg) rotateX(0deg);
-  }
+    transform:rotateX(0deg) rotateY(0deg) rotateX(0deg);}
   100%{
-    transform:rotateX(360deg) rotateY(360deg) rotateX(360deg);
-  }
+    transform:rotateX(360deg) rotateY(360deg) rotateX(360deg);}
 }
+
 section{
   width:200px; height:200px;
   position:relative;
