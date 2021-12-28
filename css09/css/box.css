@@ -1,7 +1,8 @@
 @charset "utf-8";
 @keyframes ani{
   0%{
-    transform:rotateX(0deg) rotateY(0deg) rotateX(0deg);}
+    transform:rotateX(0deg)
+    rotateY(0deg) rotateX(0deg);}
   100%{
     transform:rotateX(360deg) rotateY(360deg) rotateX(360deg);}
 }
@@ -12,14 +13,14 @@ section{
   margin: 50px auto 0;
   /* background-color:#666; */
   perspective: 1000px;
-  animation:3s linear infinite ani;
+  animation:10s linear  ani;
   transform-style: preserve-3d;
 }
 section>div{
   position:absolute;
   left:0; top:0;
   width:200px; height:200px;
-  opacity:0.4;
+  opacity:1;
 }
 /* 옆면 */
 section>div:nth-child(1){

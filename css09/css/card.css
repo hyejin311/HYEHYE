@@ -4,29 +4,26 @@ div.card{
   width:300px; height:464px;
   position:relative;
   margin: 50px auto 0;
-  perspective: 600px;
- 
-}
+  perspective: 600px;}
+
 div.card>div{
   position:absolute;
   left:0;top:0;
   width:100%; height:100%;
-  transition:all 0.4s ease-in;
-}
+  transition:all 0.4s ease-in;}
+
 div.card:hover>div.front{
 transform:rotateY(-180deg);
 z-index:0;
-transition:all 0.4s ease-in;
-}
+transition:all 0.4s ease-in;}
+
 div.card:hover>div.back{
 transform:rotateY(0deg);
 z-index:1;
-transition:all 0.4s ease-in;
-}
+transition:all 0.4s ease-in;}
 
 div.card>div.front{
-  z-index:1;
-}
+  z-index:1;}
+
 div.card>div.back{
-  transform:rotateY(180deg);
-}
+  transform:rotateY(180deg);}

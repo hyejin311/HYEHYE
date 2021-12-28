@@ -4,34 +4,26 @@
 <meta charset="utf-8">
 <title>before after</title>
 <style>
+  p{font-size:20px;}
+
 p::before{
   content:'START';
-  background-color:violet;
-  font-size:10px;
-  padding-right:10px;
-  color:#666;
-}
+  background-color:gray;
+  color:pink;
+  padding-right: 5px;
+  text-decoration:underline;}
 
 p::after{
   content:'END';
-  padding-left:10px;
-  color:white;
-  font-size:10px;
-  background-color:green;
-}
+  padding-left: 5px;
+  color:gray;
+  background-color:pink;}
 
-em{
-  display:block;
-}
-
+em{display:block;}
 em::before{
-  content:url('images/tt1.gif');
-  padding-right:10px;
-}
-em::after{
-  content:url('images/tt2.gif');
-  padding-left:10px;
-}
+  content:url('images/tt1.gif');}
+em::after
+{content:url('images/tt2.gif');}
 </style>
 </head>
 
