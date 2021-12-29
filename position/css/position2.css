@@ -1,9 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-
-*{margin:0; padding:0;}
-div{width:400px; height:500px;}
-p{width:100px; height:100px; background:yellow;}
-#box01{background:red;}
-#box02{background:green;}
-

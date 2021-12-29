@@ -1,9 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-
-p{width:180px; height:180px;
-  position: fixed;}
-.box_01{background-color:red;}
-.box_02{background-color:green;}
-.box_03{background-color:orange;}
-.box_04{background-color:pink;}
