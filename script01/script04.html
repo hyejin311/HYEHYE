@@ -6,19 +6,25 @@
 </head>
 <body>
 
-
 <!--
 자료형변화
 문자 데이터를 숫자 데이터 형으로
 1. parseInt()
 2. Number()
 -->
+<script>
+  let sum01 = 123; //number형//
+  let sum02 = '345'; //string형//
+  console.log(sum01 + sum02);
 
+  //parseInt를 넣어보자//
+  console.log(sum01 + parseInt(sum02));
+  //오브젝트.매서드()
+  //window.parseInt()
+
+  let sum03 = Number(sum02);
+  console.log(typeof sum03);
+  console.log(sum01 + sum03);
+</script>
 </body>
 </html>
-
-
-
-
-
-
