@@ -8,34 +8,36 @@
 <body>
 <script>
   //결합연산자//
-  console.log(3 + 5); // 8
-  console.log(3+5 + '5'); // 85 -> string
-  console.log(3+5 +'5'+3+5); //8535
-  console.log(3+5 +'5'+(3+5)); //8535
+console.log(10+20);
+console.log(10+'호빵');
+console.log(10+'호빵'+20+30); //10 '호빵' 더하기 라서 50//
+console.log(10,'호빵', 20+30); //10 '호빵' 쉼표이기 때문에 구분해서 연산값 50//
 
-  //연결연산자//
-  let sum = 20;
-  let str = '지리산';
-  console.log(sum + 10);
-  console.log(sum,20);
-  console.log(str+20);
-  console.log(str,20);
+//연결연산자//
+let num = 100;
+let str = '찐빵';
+console.log(num+10); //기본 연산//
+console.log(num,10); // 쉼표로 구분//
+console.log(str+10); //문자형 숫자형//
+console.log(str,10); // 쉼표로 구분 누구세요//
 
-  //차이가 없게 보일 수도 있음//
-  document.write(str + 20 + '<br>');
-  document.write(str,20,'<br>');
-  console.log(3+3,'5', 3+2);
-  console.log(3+3,'5'+ 3+2); //여기 오류
-  document.write(3+3,'5',3+2);
+document.write(str + 20 + '<br>');
+document.write(str,20,'<br>');
+console.log(3+3,'5'+3+2); //더하기는 결합 = 6532
+console.log(3+3,'5',3+2); //쉼표는 누구세요 655
+document.write(3+3,'5',3+2);
+
+//배틱 사용법//
+let some = 50;
+console.log(`감자빵${10+10}`);
+console.log(`감자빵${some+1}식빵맨`);
 
 // 1. 산술과 결합 연산자: +
 // 2. 결합연산자
 // 3. 연결연산자
 // 4. 배틱 사용법
   //배틱법//
-  let some = 20;
-  console.log(`설악산지리산${5+3}`);
-  console.log(`설악산 ${some+20} 지리산`);
+
 </script>
 </body>
 </html>
