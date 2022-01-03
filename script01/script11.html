@@ -2,25 +2,36 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>조건 연산자</title>
+<title>조건연산자</title>
 </head>
 <body>
-
-
 <!--
 //조건연산자
-//        i  <-  30
-//        j   <-  15
+// i <-  30
+// j <-  15
 
-//       조건:i가 j보다 작다.
-//        참:i가 j보다 작다.
-//         거짓:i가 j보다 크다.
+// 조건:i가 j보다 작다.
+// 참:i가 j보다 작다.
+// 거짓:i가 j보다 크다.
 -->
 <script>
-let i = 30;
-let j = 15;
-i<j ? console.log('i가 j보다 작다.'):console.log('i가 j보다 크다.')
+  //조건문의 참과 거짓으로 적어야 함.//
+  //사실 여부와 혼란하여 참과 거짓을 반대로 쓰면 안됨.//
+  let i = 30;
+  let j = 15;
+  i<j ? console.log('i가 j보다 작다.'):console.log('i가 j보다 크다.');
 
+let a = 0;
+let b = 99;
+a>b ? console.log('a가 더 크다.'):console.log('b가 더 크다.');
+
+let aa = -10;
+let bb = 10;
+aa === bb ? console.log('값이 같다.'):console.log('값이 다르다.');
+
+let ab = 100;
+let abc = 1000;
+ab<abc ? console.log('abc가 더 크다.'):console.log('ab가 더 크다.');
 </script>
 </body>
 </html>
