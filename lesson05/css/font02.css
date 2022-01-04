@@ -2,25 +2,24 @@
 /* CSS Document */
 
 /*행간만들기*/
-
 /* .font01  여백 30px*/
 .font01{line-height: 50px;}
 /* .font02 140%->실수로 */
 .font02{line-height: 1.4;}
 
-.ect{
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;}
+.ect
+{font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;}
 /*weight하기*/
 /* .ect  Arial, Helvetica체, 사이즈는 20px로 설정*/
-.font01 .ect{font-family:Arial, Helvetica, sans-serif;
-font-size:20px;}
+.font01 .ect
+{font-family:Arial, Helvetica, sans-serif;font-size:20px;}
 /*. weigth01 폰트 굵기를 키워드로 가장 굵게*/
-.weight01{font-weight:bolder;}
+.weight01{font-weight: bolder;}
 /*. weigth02 폰트 굵기를 키워드로 가장 얇게*/
-.weight02{font-weight:lighter;}
+.weight02{font-weight: lighter;}
 /*. weigth03 폰트 굵기를 실수로 가장 얇게 */
-.weight03{font-weight:200}
+.weight03{font-weight: 200;}
 /*. weigth04 폰트 굵기를 실수로 조금 두껍게 */
 .weight04{font-weight: 700;}
 

@@ -1,15 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
-h1{color:red;}
-/* id 선택하기:아이디 set01 -> clor red */
-h2#set01{color:green;}
+h1{color:blue;}
+/* id 선택하기:아이디 set01 -> color red */
+h2#set01{color:red;}
 /* class선택하기 : 클래스drink -> color yellow */
-.drink{color: yellow;}
+.drink{color:yellow;}
 /* 다중클래스 선택하기  클래스 special -> color:green */
-.special{color: green;}
+.special{color:green;}
 /* 자식요소 선택하기 아이디 set02의 자식ul -> 배경 pink*/
-#set02+ul{background-color: pink;}
 /* 아이디set02 바로 다음의 형제인 ul */
-#set02~ul{border:2px solid #333;}
-#set01+ul>.drink{background-color: #000;}
-h2#set02~h2+ul li{border: 2px solid red;}
+#set02~ul{background-color:pink;}
+#set02+ul{font-weight:bold;}
+#set01~{border: 1px double pink;}
