@@ -13,13 +13,15 @@
 if (){}
 else if(){}
 else{} -->
-
 <script>
-  let room = prompt('번호를 입력하세요','회원이면 : 1', '비회원(초대장 소지):2', '비회원(초대장 미소지):3');
-  if(room == 1){document.write('쿠폰이 발행되었습니다.');
-  }else if(room == 2){
-    document.write('쿠폰이 발행되었습니다. 회원등록 해 주시면 더욱 좋은 서비스를 제공해 드립니다');
-  }else{document.write('회원이 되시면 많은 서비스가 기다리고 있습니다.');}
+let room = prompt('번호를 입력하세요', '회원이면 :1', '비회원(초대장 소지): 2', '비회원(초대장 미소지) : 3');
+if(room == 1){
+  document.write('쿠폰이 발행되었습니다.');
+}else if(room == 2){
+  document.write('쿠폰이 발행되었습니다. 회원등록해주시면 더욱 좋은 서비스를 제공해드립니다.');
+}else{
+  document.write('회원이 되시면 많은 서비스가 기다리고 있습니다.');
+}
 </script>
 </body>
 </html>

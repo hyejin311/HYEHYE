@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수의 종류</title>
+</head>
+<body>
+  <script>
+//이름 있는 함수//
+function num(){
+  let result = 3*5;
+  console.log('num',result);
+}
+num();
+
+//이름 없는 함수 -> 화살표 함수//
+let room = function(){
+  let result = 3/4;
+  console.log('room:', result);
+}
+room();
+
+//함수식//
+(function(){
+let result = 12/0.5;
+console.log('함수식:',result);
+})()
+
+//영역에 대한 해결법//
+function sum(x){
+  let y = x*10;
+  return y;
+  /* console.log(y) */
+}console.log(sum(3));
+// }sum(3);
+
+function all(a,b){
+  let result;
+  //result = 실행문;
+  a>b ? result = console.log('a가 크다'): result = console.log('b가 크다.');
+  return result;
+}
+
+all(234,567);
+  </script>
+</body>
+</html>

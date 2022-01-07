@@ -13,16 +13,16 @@
 //기타       ->1층 안내실로 가세요. '출력
 -->
 <script>
-let room = prompt('학년을 입력하세요', '1학년 : 1', '2학년: 2', '3학년:3');
-switch(room){
-  case '1' : {document.write('2층으로 가세요');}
-  break;
-  case '2' : {document.write('3층으로 가세요');}
-  break;
-  case '3' : {document.write('별관으로 가세요');}
-  break;
-  default : {document.write('1층 안내실로 가세요');}
-}
+  let floor = prompt('학년을 입력하세요','1학년 : 1','2학년 : 2','3학년 :3');
+  switch(floor){
+    case '1': document.write('2층으로 가세요');
+    break;
+    case '2': document.write('3층으로 가세요.');
+    break;
+    case '3' : document.write('별관으로 가세요');
+    break;
+    default : document.write('1층 안내실로 가세요');
+  }
 </script>
 </body>
 </html>

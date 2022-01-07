@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <title>인수</title>
 <script>
-
+  function order (flower){
+    switch(flower){
+      case '무궁화' : alert('무궁화 동호회에 가입하세요.');
+      case '장미':alert('장미 동호회에 가입하세요');
+      case '국화':alert('국화 동호회에 가입하세요');
+}}
 </script>
-</head>
-<body>
-<button type="button" value="무궁화">무궁화</button>
-<button type="button" value="장미" >장미</button>
-<button type="button" value="국화">국화</button>
 <!--버튼클릭->함수 order에 '무궁화'보내기
  버튼클릭->함수 order에 '장미'보내기 
 버튼클릭->함수 order에 '국화'보내기-->
+<button type="button" value="무궁화" onclick="order('무궁화')">무궁화</button>
+<button type ="button" value="장미" onclick="order('장미')">장미</button>
+<button type="button" value="국화" onclick="order('국화')">국화</button>
 </body>
 </html>

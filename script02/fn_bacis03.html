@@ -3,16 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>onClick()</title>
-<script>
-
-</script>
 </head>
 <body>
+<script>
+function ok(a){
+  console.log(a);
+}
+function no(b){
+  console.log(b);
+}
+</script>
 <!--
 버튼->click->ok함수 불러들이기
 버튼->click->no함수 불러들이기
--->
-<button type="button" value="ok">OK</button>
-<button type="button" value="no">NO</button>
+a -> 이벤트 클릭 -> href 속성 -> 후작업 -> 이벤트 정리할 때 함
+버려야 할 애들 (onClcik 대소문자형, 이미지명, 값x)-->
+<button type="button" value="ok" onclick="ok('a')">OK</button>
+<button type="button" value="no" onclick="no('b')">NO</button>
 </body>
-</html> 
+</html>

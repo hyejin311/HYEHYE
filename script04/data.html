@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>인스턴스란</title>
+</head>
+<body>
+   <script>
+    //내장 객체 -> 날짜/시간 시스템 만들기 -> 속성, 매서드 설계 -> 내가 원하는 작동을 위한 작은 인스턴스가 만들어져야 함.//
+    //선언을 해야 함. 나의 이름을 만들어야 함. //
+    let date = new Date();
+    console.log(date);
+    console.log(date.getFullYear());
+    console.log(date.getMonth()+1);
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDate();
+
+    document.write(`오늘은 ${year}년 ${month+1}월 ${day}일`);
+   </script>
+</body>
+</html>
