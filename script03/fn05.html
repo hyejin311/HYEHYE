@@ -12,14 +12,19 @@
 전역변수 a 출력하기 - 선언없이
 -->
 <script>
+  //var 로 선언된 a는 지역함수//
+//선언없는 b는 전역함수//
+//선언된 함수를 먼저 불러내고//
 function love(){
-  var b = 'sun';
-  a = 'moon';
-console.log('전역:',a,'지역:',b);
+var a = 'moon';
+b = 'star';
+console.log('지역함수:',a,'전역함수:',b);
 }
 love();
-console.log(a);
-// console.log(b);
+console.log(b);
+
+//매개변수에 a,b 넣어서 오류 떴었다 조심//
+
 </script>
 </body>
 </html>

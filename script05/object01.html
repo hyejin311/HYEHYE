@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DOM</title>
+</head>
+
+<body>
+<!-- 전공과목 : 책의 이름 판매부수 저자 -->
+<script>
+    let STR = new Object();
+    STR.title = '그래픽';
+    STR.book = '포토샵';
+    STR.num = 1;
+    STR.list = function(){
+    document.write(`${STR.title} : ${STR.book} : 판매 부수 ${STR.num ++} <br>`);  
+    }
+    console.log(STR.title);
+    STR.list();
+    STR.list();
+    STR.list();
+    STR.list();
+    STR.list();
+    console.log(STR.num);
+
+</script>
+</body>
+</html>

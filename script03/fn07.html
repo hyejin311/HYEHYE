@@ -7,17 +7,37 @@
 </head>
 <body>
 <script>
-//기존
-let all = function(str){
-  console.log(str);
-}
-all('welcome');
 
-//  화살표 함수 사용하기
-let all2 = str=>{
+// 1. 매개변수 없을 경우//
+// let a = function(){
+//   let result = 'moon';
+//   console.log(result);
+// }
+// a();
+
+let a = ()=>{
+  console.log('moon');
+}
+a();
+
+// 2.매개변수 1개일 경우//
+// let b = function(str){
+//   let result = str;
+//   console.log('sky');
+// }
+// b();
+
+let b = str =>{
   console.log(str);
 }
-all2('javascript')
+b('sky');
+
+// 3. 매개변수 2개 이상일 경우//
+let c = function (x,y){
+  let result = x * y;
+  console.log(result);
+}
+c(5,9);
 </script>
 </body>
 </html>

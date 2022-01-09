@@ -7,10 +7,40 @@
  <title>forEach()</title>
 </head>
 <body>
- <script>
-
+ <!-- <script>
 var Num = [1,2,3,4];
+Num.forEach(function(str,index){
+  document.write(index, `:`, str*2 +'<br>');
+});
+ </script> -->
 
+ <p>
+   <!-- <img src="해당되는 버튼의 값" alt="해당되는 버튼의 값"> -->
+ </p>
+<div>
+  <button type="button" data-url="red">red</button>
+  <button type="button" data-url="yellow">yellow</button>
+  <button type="button" data-url="green">green</button>
+</div>
+
+ <script>
+//데이터 정리//
+const btn = document.querySelectorAll('button');
+// console.log(btn);
+// console.log(btn[1]);
+const P = document.querySelector('p');
+// forEach ->s
+btn.forEach(function(str){
+  str.onclick = function(){
+    console.log(str);
+    //실행문 하겠다//
+    //1. data-url 가져오기
+    let Attr = str.getAttribute('data-url');
+    // console.log(Attr);
+    //2. img 요소 생성 -> innerHTML
+    P.innerHTML = `<img src="images/${Attr}".png alt="${Attr}">`
+  }
+});
  </script>
 </body>
 </html>

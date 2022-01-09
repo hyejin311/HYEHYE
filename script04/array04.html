@@ -7,10 +7,18 @@
  <title>forEach()</title>
 </head>
 <body>
+  <button>클릭</button>
+
  <script>
 
 var Num = [1,2,3,4];
-
+const cars= ['red','blue','green'];
+const btn = document.querySelector('button');
+function play(){
+  for(let i = 0; i < cars.length ; i++){
+    document.write(`${cars[i]}자동차<br>`)
+  }}
+btn.onclick = play;
  </script>
 </body>
 </html>

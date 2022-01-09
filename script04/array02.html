@@ -9,7 +9,15 @@
 <body>
  <script>
   let Num = [1,2,3,4];
+let str = Num.map(function(item){
+  return item*3;
+});
+console.log(str);
 
+//실행적인 작업//
+str.forEach(function(item,index){
+  document.write(`번호 ${index+1} : ${item}`,'<br>');
+});
  </script>
 </body>
 </html>

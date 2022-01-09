@@ -9,15 +9,26 @@
 <body>
 
 <script>
-let all = function(){
- console.log('javascript');}
-all();
-
-//  화살표 함수 사용하기
-let all2 = ()=>{
-  console.log('welcome');
+  //1. 매개변수 없을 경우//
+  //매개변수 없을 경우엔 ()는 공백, console.log에만 한 번 선언한다.
+let a = ()=>{
+  console.log('dreams');
 }
-all2();
+a();
+
+//매개변수 1개일 경우//
+//매개변수 1개일 경우엔 괄호 없이 선언 후 말하고 console.log에도 말한다. 총 2번 말하고 빠져나온 후 한 번 선언한다.//
+let b = str =>{
+  console.log(str);
+}
+b('come true');
+
+//매개변수 2개 이상일 경우//
+//console.log()에는 식 적고, 빠져나온 후 값 선언한다.//
+let c = (x,y)=>{
+  console.log(x * y);
+}
+c(40,6);
 </script>
 </body>
 </html>

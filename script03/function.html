@@ -6,44 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>함수의 종류</title>
 </head>
+
 <body>
-  <script>
+<script>
 //이름 있는 함수//
-function num(){
-  let result = 3*5;
-  console.log('num',result);
+function love(){
+  let result = '아침';
+  console.log(result);
 }
-num();
+love();
+
+let a = ()=>{
+  console.log('아침');
+}
+a();
 
 //이름 없는 함수 -> 화살표 함수//
-let room = function(){
-  let result = 3/4;
-  console.log('room:', result);
+let b = function(){
+  let result = '점심';
+  console.log(result);
 }
-room();
+b();
+
+let bb = str =>{
+  console.log(str);
+}
+bb('점심');
 
 //함수식//
 (function(){
-let result = 12/0.5;
-console.log('함수식:',result);
+let result = '저녁';
+console.log(result);
 })()
 
 //영역에 대한 해결법//
-function sum(x){
-  let y = x*10;
-  return y;
-  /* console.log(y) */
-}console.log(sum(3));
-// }sum(3);
-
-function all(a,b){
-  let result;
-  //result = 실행문;
-  a>b ? result = console.log('a가 크다'): result = console.log('b가 크다.');
-  return result;
+function xx(x){
+  let yy = x / 20;
+  console.log(yy);
 }
+xx(200);
 
-all(234,567);
-  </script>
+//삼항연산자 a,b//
+//let result; return result; 안 넣어도 값이 출력됨. 여기서 result의 역할과 필요이유는??//
+function zoo(a,b){
+a>b ? console.log('a가 크다.'):console.log('b가 크다.');
+}
+zoo(5,500);
+
+</script>
 </body>
 </html>
