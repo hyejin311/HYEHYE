@@ -6,12 +6,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>onclick 과제</title>
 </head>
+
 <body>
-	<div>
-		<button type="button" data-url="pic">click me!</button>
-	</div>
+<p>
+<button type="button" data-url="1">이미지</button>
+</p>
 
 <script>
+//데이터 정리//
+const btn = document.querySelectorAll('button');
+// console.log(btn);
+// console.log(btn[1]);
+// forEach ->s
+btn.forEach(function(이미지){
+ 이미지.onclick = function(){
+	 console.log(이미지);
+	 //실행문 하겠다//
+	 //1. data-url 가져오기
+	 let Attr = 이미지.getAttribute('data-url');
+	 // console.log(Attr);
+	 //2. img 요소 생성 -> innerHTML
+	 P.innerHTML = `<img src="img/${Attr}".png alt="${Attr}">`
+ }
+});
+
 </script>
 </body>
 </html>

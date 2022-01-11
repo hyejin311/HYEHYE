@@ -25,6 +25,22 @@
     STR.list();
     console.log(STR.num);
 
+
+let STR1 = new Object();
+STR1.title = '과목이름';
+STR1.book = '가격';
+STR1.num = '저자';
+STR1.num = 1;
+STR1.list = function(){
+    document.write(`${STR1.title} : ${STR1.book} : ${STR1.num++} <br>`);
+}
+console.log(STR1.title);
+STR1.list();
+STR1.list();
+STR1.list();
+STR1.list();
+STR1.list();
+console.log(STR1.num);
 </script>
 </body>
 </html>

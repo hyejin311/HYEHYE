@@ -6,17 +6,29 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>map()</title>
 </head>
+
 <body>
- <script>
-  let Num = [1,2,3,4];
+<script>
+// let Num = [1,2,3,4];
+// let str = Num.map(function(item){
+//   return item*3;
+// });
+// console.log(str);
+
+
+let Num = [1,2,3,4,5];
 let str = Num.map(function(item){
-  return item*3;
+return item*5;
 });
 console.log(str);
 
 //실행적인 작업//
+// str.forEach(function(item,index){
+//   document.write(`번호 ${index+1} : ${item}`,'<br>');
+// });
+
 str.forEach(function(item,index){
-  document.write(`번호 ${index+1} : ${item}`,'<br>');
+  document.write(`번호 ${index+1} : ${item}`, '<br>')
 });
  </script>
 </body>

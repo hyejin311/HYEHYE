@@ -9,39 +9,39 @@
 
 <body>
 <script>
-let colors = ['red','orange','yellow','green','blue','purple'];
-console.log(colors);
-colors.length;
+let one = new Array (1,2,3,4,5);
+console.log(one);
 
-//<unshift, shift>//
-// colors.unshift('rainbow');
-// console.log(colors);
+one.unshift(0);
+console.log(one);
 
-// colors.shift();
-// console.log(colors);
+one.shift();
+console.log(one);
 
-//<push,pop>//
-// colors.push('love');
-// console.log(colors);
+one.push(6);
+console.log(one);
 
-// colors.pop();
-// console.log(colors);
+one.pop();
+console.log(one);
 
-// let num = [1,2,3,4,5];
-// num.splice(2,'three');
-// console.log(num);
-
-let num = [1,2,3,4,5,6,7,8,9,10];
-num.splice(1,2,'아','오');
+let num = [100,200,300,400,500];
+num.splice(1,2,'이백','삼백');
 console.log(num);
 
-let num2 = [10,20,30,40,50];
-num2.slice(2);
-console.log(num2);
+let some = [10,20,30,40,50];
+some.slice(1,2);
+console.log(some);
 
+let good = [1,2,3,11,'1','a','z','바'];
+good.sort();
+console.log(good);
 
+let love = [23,67,4,56];
+const xyz = love.join('@');
+console.log(xyz);
 
-
+let en = [1,2,3,4,5];
+document.write(some+'<br>'+en);
 </script>
 </body>
 </html>
