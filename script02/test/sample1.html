@@ -15,18 +15,21 @@
 <script>
 //데이터 정리//
 const btn = document.querySelectorAll('button');
+const P = document.querySelector('p');
 // console.log(btn);
 // console.log(btn[1]);
 // forEach ->s
-btn.forEach(function(이미지){
- 이미지.onclick = function(){
-	 console.log(이미지);
+btn.forEach(function(box){
+ box.onclick = function(){
+	 console.log(box);
+
 	 //실행문 하겠다//
 	 //1. data-url 가져오기
-	 let Attr = 이미지.getAttribute('data-url');
+	 let Attr = box.setAttribute('data-url'.onclick);
 	 // console.log(Attr);
+
 	 //2. img 요소 생성 -> innerHTML
-	 P.innerHTML = `<img src="img/${Attr}".png alt="${Attr}">`
+	 P.innerHTML = `<img src="pic/${Attr}".png alt="${Attr}">`
  }
 });
 

@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사용자 객체1</title>
+    <title>사용자 객체1-리터널 형식</title>
     <link rel="stylesheet" href="css/box.css">
 </head>
 <body>
+
+<script>
+let Art = {
+    title : '에펠탑의 신랑신부',
+    pic : 'images/pic01.jpg',
+    artist : '마르크 샤갈',
+    year : 1938,
+    Paint : function(){
+        document.write(
+            `<dl>
+                <dt>${Art.title}</dt>
+                <dd><img src="${Art.pic}".jpg alt="${Art.title}"></dd>
+                <dd>${Art.artist}</dd>
+                <dd>${Art.year}</dd>
+                </dl>`
+        );
+    }
+}
+Art.Paint();
+</script>
 
        <!-- images/pic01.jpg 
         에펠탑의 신랑신부 

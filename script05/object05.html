@@ -4,14 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DOM</title>
-
+    <title>생성자 함수 만들기</title>
 </head>
 
 <body>
+<script>
+//생성자 함수 만들기//
+function Course(title,people,level){
+    this.title = title;
+    this.people = people;
+    this.level = level;
+    // this.action = function(){
+    //     document.write(
+    //         `
+    //     과정명 : ${this.title},
+    //     레벨 : ${this.level},
+    //     인원수: ${this.people},
+    //     입니다.<br>
+    //     `)
+}
 
+//프로토타입 만들기//
+Course.prototype.action = function(){
+    document.write(
+        `과정명 : ${this.title},
+        레벨 : ${this.level},
+        인원수: ${this.people},
+        입니다.<br>
+        `);}
+
+Course.prototype.list = function(){
+    document.write(
+        `
+        현재과정별 인원수 : ${this.title} : ${this.people} <br>`
+    );}
+
+//인스턴스//
+let source = [
+    new Course('jacascript','10','2'),
+    new Course('html','15','1'),
+    new Course('css','15','1')
+]
+
+//작동//
+// source[0].action();
+// console.log(source[1].title);
+for(let i of source){
+    // i.action();
+    i.action();
+}
+
+</script>
 </body>
-
-
-
 </html>

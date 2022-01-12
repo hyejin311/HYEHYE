@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사용자 객체1</title>
+    <title>사용자 객체2-생성자 함수 만들기</title>
     <link rel="stylesheet" href="css/box.css">
 </head>
-<body>
 
+<body>
+<script>
+//객체 생성//
+function Picture (pic,title,artist,year){
+    this.pic = pic;
+    this.title = title;
+    this.artist = artist;
+    this.year = year;
+}
+
+//매서드 생성//
+Picture.prototype.action = function(){
+    document.write(
+        `
+        <dl>
+        <dt>${this.title}</dt>
+        <dd><img src="${this.pic}" alt="${this.title}"</dd>
+        <dd>${this.artist}</dd>
+        <dd>${this.year}</dd>
+        </dl>
+        `
+    );}
+
+//인스턴스//
+let source = [
+new Picture('images/pic01.jpg','에펠탑의 신랑신부', '마르크 샤갈', '1938'),
+new Picture('images/pic02.jpg', '여인2','피카소', '1937'),
+new Picture('images/pic03.jpg','발레수업','드가', '1871'),
+new Picture('images/pic04.jpg','피아노 치는 소녀','오귀스트 르누아르','1989')
+]
+
+//작동//
+console.log(source[0].title);
+for(let str of source){
+str.action();
+}
+</script>
 <!-- 
 images/pic01.jpg 에펠탑의 신랑신부 마르크 샤갈 1938
 images/pic02.jpg' 여인2 피카소 1937

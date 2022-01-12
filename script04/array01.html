@@ -34,10 +34,12 @@ const P = document.querySelector('p');
 btn.forEach(function(str){
   str.onclick = function(){
     console.log(str);
+
     //실행문 하겠다//
     //1. data-url 가져오기
     let Attr = str.getAttribute('data-url');
     // console.log(Attr);
+    
     //2. img 요소 생성 -> innerHTML
     P.innerHTML = `<img src="images/${Attr}".png alt="${Attr}">`
   }

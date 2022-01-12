@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DOM</title>
+    <title>사용자 객체 기본형1</title>
 </head>
 
 <body>
@@ -25,22 +25,19 @@
     STR.list();
     console.log(STR.num);
 
-
+//사용자 객체 기본형 handmade //
 let STR1 = new Object();
-STR1.title = '과목이름';
-STR1.book = '가격';
-STR1.num = '저자';
-STR1.num = 1;
-STR1.list = function(){
-    document.write(`${STR1.title} : ${STR1.book} : ${STR1.num++} <br>`);
+STR1.title = '베스트셀러';
+STR1.book = '나는 나로 살기로 했다';
+STR1.person = '김수현';
+STR1.year= 2020;
+STR1.list= function(){
+    document.write(
+        `분야 : ${STR1.title} <br> 책 제목 : ${STR1.book} <br> 저자 : ${STR1.person} <br> 연도 : ${STR1.year}`
+    );
 }
-console.log(STR1.title);
 STR1.list();
-STR1.list();
-STR1.list();
-STR1.list();
-STR1.list();
-console.log(STR1.num);
+
 </script>
 </body>
 </html>
