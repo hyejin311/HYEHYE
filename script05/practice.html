@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>생성자 함수 연습합니다</title>
+  <link rel="stylesheet" href="css/box.css">
+</head>
+
+<body>
+  <div>
+<button type ="text" name="0">button01</button>
+<button type ="text" name="1">button02</button>
+<button type ="text" name="2">button03</button>
+<button type ="text" name="3">button04</button>
+</div>
+
+<dl>
+  <dt></dt>
+  <dd></dd>
+  <dd></dd>
+  <dd></dd>
+</dl>
+
+<script>
+//오브젝트//
+const btn = document.querySelectorAll('button');
+const Title = document.querySelector('dt');
+const Pic = document.querySelector('dl>dd:nth-child(2)');
+const Artist = document.querySelector('dl>dd:nth-child(3)');
+const Year = document.querySelector('dl>dd:nth-child(4)');
+
+//객체 생성//
+function Picture(title,pic,artist,year){
+  this.title = title;
+  this.pic = pic;
+  this.artist = artist;
+  this.year = year;
+}
+
+//매서드//
+Picture.prototype.action = function(){
+  Title.innerHTML = this.title;
+  Pic.innerHTML = `<img src= "${this.pic}" alt="${this.title}">`;
+  Artist.innerHTML = this.artist;
+  Year.innerHTML = this.year;
+}
+
+//인스턴스//
+let source = [
+  new Picture('에펠탑의 신랑신부','images/pic01.jpg','마르크 샤갈','1938'),
+  new Picture('여인2','images/pic02.jpg','피카소','1937'),
+  new Picture('발레수업','images/pic03.jpg','드가','1838'),
+  new Picture('피아노 치는 소녀','images/pic04.jpg','오귀스트','1738')
+]
+
+//이벤트 함수//
+function play(e){
+  let num = this.getAttribute('name');
+  source[num].action();
+}
+
+//이벤트//
+console.log(btn);
+btn.forEach(function(btn){
+  btn.onclick = play;
+});
+
+</script>
+</body>
+</html>
