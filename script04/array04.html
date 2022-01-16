@@ -20,20 +20,17 @@
 //     document.write(`${cars[i]}자동차<br>`)
 //   }}
 // btn.onclick = play;
+let Num =[1,2,3,4];
 
+const cars =['black','pink','yellow','green','red'];
+const btn = document.querySelector('button');
 
-
-var Num = [1,2,3,4,5];
-const cars=['black','mamba','lext','level'];
-const btn=document.querySelector('button');
-
-function play (){
-  for(let i = 0; i < cars.length; i++){
-    document.write(`${cars[i]}자동차<br>`)
+function play(){
+for(let i = 0; i < cars.length; i++){
+  document.write(`${cars[i]} 자동차<br>`);
 }}
-btn.onclick = play;
 
-
+btn.onclick= play;
 
  </script>
 </body>

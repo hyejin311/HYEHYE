@@ -8,37 +8,41 @@
 <body>
 <script type="text/javascript">
 //현재 연도 월 일 요일//
-//Date 객체 만들기//
-function Date(Year,Month,Date,Day){
-  this.Year = getFullYear;
-  this.Month = getMonth;
-  this.Date = getDate;
-  this.Day = getDay;
-}
-
-Date.prototype.action = function(){
+let Dday = new Date();{
   document.write(
-  `현재는 ${this.Year} 년 ${this.Month+1}월 ${this.Date}일 ${this.Day} 일 입니다.`
-);
-}
-Date.action();
-
-switch ('수'){
-  case '월': document.write('월요일입니다.');
-  case '화': document.write('화요일입니다.');
-  case '수': document.write('수요일입니다.');
-  case '목': document.write('목요일입니다.');
-  case '금': document.write('금요일입니다.');
-  case '토': document.write('토요일입니다.');
-  case '일': document.write('일요일입니다.');
+    `오늘은
+    ${Dday.getFullYear()}년
+    ${Dday.getMonth()+1}월
+    ${Dday.getDate()}일`
+  );
 }
 
+let NewDay = Dday.getDay();
+console.log(NewDay);
+
+switch(6){
+  case 0 : document.write(' 일요일입니다.');
+  break;
+  case 1 : document.write(' 월요일입니다.');
+  break;
+  case 2 : document.write(' 화요일입니다.');
+  break;
+  case 3 : document.write(' 수요일입니다.');
+  break;
+  case 4 : document.write(' 목요일입니다.');
+  break;
+  case 5 : document.write(' 금요일입니다.');
+  break;
+  case 6 : document.write(' 토요일입니다.');
+};
+
+//Date 객체 만들기//
 //출력= > document.write(현재 년 월 일);
 //요일 -> switch문,
 //switch(현재요일){
 //case 값 : document.write('일요일입니다.')
 // }
-배열
+//배열//
 </script>
 </body>
 </html>

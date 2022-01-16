@@ -8,7 +8,32 @@
 
 <body>
 <script type="text/javascript">
+  //string형//
+let Dday = new Date(1000);
+console.log(Dday);
 
+//new Date('YYYY-MM-DDThh:mm:ss');
+
+let Dday01 = new Date('2019/10/10');
+console.log(Dday01);
+
+let Dday02 = new Date('2021-10-10T03:12:12');
+console.log(Dday02);
+
+//number형//
+//new Date(YYYY,MM,DD,hh,mm,ss,ms);//
+let Eday = new Date(2019,10,10);
+console.log(Eday);
+
+let Fday = new Date(2019,09,10);
+console.log(Fday);
+
+Fday.setFullYear(2021);
+console.log(Fday);
+
+Fday.setMonth(03);
+console.log(Fday);
+console.log(Date.now());
 </script>
 </body>
 </html>

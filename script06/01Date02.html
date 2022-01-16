@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시계 만들기</title>
+</head>
+
+<body>
+<!-- 년 월 일 요일 -->
+<p>
+<span class="d01"></span>
+<span class="d02"></span>
+<span class="d03"></span>
+<span class="d04"></span>
+</p>
+
+<p>
+  <span class="t01"></span>
+  <span class="t02"></span>
+  <span class="t03"></span>
+</p>
+
+<script>
+const Year = document.querySelector('.d01');
+const Mon = document.querySelector('.d02');
+const Day = document.querySelector('.d03');
+const Yoil = document.querySelector('.d04');
+
+const Hr = document.querySelector('.t01'); 
+const Min = document.querySelector('.t02'); 
+const Sec = document.querySelector('.t03'); 
+
+let days=['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+
+let today = new Date();
+Year.innerHTML = today.getFullYear()+'년';
+Mon.innerHTML = (today.getMonth()+1)+'월';
+Day.innerHTML = today.getDate()+'일';
+Yoil.innerHTML = days[today.getDay()];
+
+function time(){
+let Ttime = new Date();
+let hr = Ttime.getHours();
+let min = Ttime.getMinutes();
+let sec = Ttime.getSeconds();
+console.log(hr,':',min,':',sec);
+
+hr= 17;
+if(hr-12>10){
+  Hr.innerHTML = hr-12 < 10? `오후0${hr-12}:`:`오후${hr-12}:`
+}else{
+  Hr.innerHTML = hr < 10? `오전0${hr}:`: `오전${hr}:` 
+}
+Min.innerHTML = min < 10 ? `0${min}:`:`${min}:`
+Sec.innerHTML = sec < 10 ? `0${sec}`: `${sec}`
+}
+time();
+setInterval(time,1000);
+
+</script>
+</body>
+</html>

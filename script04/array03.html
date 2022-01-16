@@ -8,16 +8,18 @@
 </head>
 
 <body>
- <script>
-  let Num = [0,1,2,3,4,5,6,7];
-  let strNew = Num.filter(function(item){
-    return item % 2 === 0;
-  });
-  console.log(strNew);
+<script>
+let Num =[11,13,15,17,19,21,24];
+let str = Num.filter(function(item){
+return item %2 === 0;
+});
+console.log(str);
 
-  strNew.forEach(function(item){
-    document.write(`짝수는 : ${item}`,'<br>')
-  });  
+str.forEach(function(item){
+  document.write(
+    `짝수는 ${item}입니다. <br>`
+  );
+})
 
 // strNew.forEach(function(item){
 // document.write(`짝수는 : ${item} <br>`)
