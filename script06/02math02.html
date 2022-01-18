@@ -1,35 +1,61 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>Math:style</title>
-<style type="text/css">
-body { font: 12px "나눔고딕"; }
-#wrap { position:relative; width:700px; height:500px; background:#0CF; }
-#box { position:absolute; left:0px; top:0px; width:50px; height:50px; background:#ff6; }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study</title>
+</head>
+<style>
+#wrap{
+  margin: auto;
+  position: relative;
+  width: 500px; height: 500px;
+  border: 3px solid #000;
+  background-color: green;
+}
+
+#box{
+  position:absolute;
+  background-color:beige;
+  width:90px; height: 90px;
+  border: 1px solid #000;
+}
 </style>
 
-<script type="text/javascript">
-
-</script>
-</head>
-
 <body>
-
-<div id="wrap">
-   <div id="box"></div>
-</div>
+  <div id="wrap">
+  <div id="box"></div>
+  </div>
 
 <script>
-   0. #box -> const 지정하고 들어가기
-   1. 함수 만들기
-   //position absolute 범위
-   // left -> 최소값에서 최대값 잘 구해야 함.
-   // top -> 최소값에서 최대값 잘 구해야 함. 
-   // #box -> style.top = 변수 + 'px';
-   // #box -> style.left = 변수 + 'px';
-   2. 이벤트 들어가기
-   // #box -> click -> onclick => 함수
+const Box = document.querySelector('#box');
+
+console.log(Math.min(10))+'px';
+console.log(Math.max(500))+'px';
+
+let play = new Object();
+console.log(Math.random());
+console.log(Math.min(10))+'px';
+console.log(Math.max(500))+'px';
+
+function move(e){
+Box.onclick = play;
+}
+move();
+
 </script>
 
+<!--
+0. #box -> const 지정  
+1. 함수 만들기
+position absolute 범위
+left -> 최소값 ~ 최대값
+top-> 최소값 ~ 최대값
+#box -> style.top = 변수 + 'px';
+#box -> style.left = 변수 + 'px';
+
+2. 이벤트
+#box -> click -> onclick -> 함수 -->
 </body>
 </html>
