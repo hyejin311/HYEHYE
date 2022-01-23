@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loading</title>
+  <!--NO 
+    <script>
+    document.querySelector('#box').innerHTML= 'javascript';
+  </script> -->
+</head>
+<!-- onload -> html1 : 마지막에 실행되는 애들만 됨.
+  단점은 모든 콘텐츠 로딩 후 작동이 됨.(불필요한 로딩 시간 필요함.) -->
+
+<body>
+  <div id="box"></div>
+  <!-- onload 방법 -->
+  <!-- <script>
+    window.onload=function(){
+      document.querySelector('#box').innerHTML='javascript';
+    }
+  </script> -->
+
+  <!-- addEventListner 방법 -->
+<!-- <script>
+  window.addEventListener('load',function(){
+  document.querySelector('#box').innerHTML='javascript';
+  });
+</script> -->
+
+<!-- DOMContentLoaded 방법
+html,script 로드된 시점에 발생하는 이벤트, onload 실행 빠름, IE8 이하는 안됨. -->
+<script>
+  window.addEventListener('DOMContentLoaded',function(){
+  document.querySelector('#box').innerHTML='javascript';
+  });
+</script>
+
+  <!-- <script>
+    document.querySelector('#box').innerHTML= 'javascript';
+  </script> -->
+</body>
+</html>

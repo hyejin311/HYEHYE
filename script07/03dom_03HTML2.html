@@ -18,11 +18,28 @@
       	font-style: italic;}
     </style>
   </head>
+
   <body>
     <figure class="picBox">
         <img src="images/earth.jpg" alt="우주에서 본 지구의 모습입니다.">
     </figure>
+
     <script>
+      // 1.오브젝트
+      const Box = document.querySelector('.picBox');
+      const Img = document.querySelector('.picBox>img');
+
+      // 2. 소스 만들기
+      let Alt = Img.getAttribute('alt');
+
+      // 3.생성하기
+      let Figcaption = document.createElement('figcaption');
+      Figcaption.append(Alt);
+
+      // 4. 완전체
+      Box.append(Figcaption);
+      Img.setAttribute('alt','상세이미지');
+    
     </script>
   </body>
 </html>

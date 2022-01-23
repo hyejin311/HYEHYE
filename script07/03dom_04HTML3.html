@@ -10,8 +10,20 @@
 <body>
 <button> 요소 추가</button>
 
-<div>test</div>
+<div>
 
+test
 
+</div>
+
+<script>
+  const Div = document.querySelector('div');
+
+  Div.prepend('바로 앞에');
+  Div.append('뒤에 추가');
+  Div.before('앞에');
+  Div.after('뒤에');
+  
+</script>
 </body>
 </html>

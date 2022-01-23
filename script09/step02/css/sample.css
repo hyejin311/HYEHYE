@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+h1{width:600px;
+  text-align:center;
+  margin: 0 auto;
+padding:25px 0;color:#daa316;}
+p{width:600px;
+  text-align:center;
+  margin: 0 auto;}
+
+  #gallery{
+  width:900px;
+  margin: 0 auto;
+  border: 1px dashed #1dbac9;
+  position:relative;
+  /* padding:15px 0; */
+}
+
+  /* gallery */
+#gallery>.mas{
+  position:relative;
+  width:600px;
+  height:327px;
+  margin: 0 auto;
+  border: 2px solid #cc420f;
+  /* overflow:hidden; */
+}
+
+#gall{
+  width:6000px;
+position:absolute; left: 0; top:0;
+display:flex;
+flex-wrap: wrap;
+}
+
+#gall>ul.box{
+  width: 3000px;
+display: flex;
+flex-wrap: wrap;
+}
+
+#gall>ul.box>li{
+  /* width:600px; */
+
+}
+
+#gall>ul.box>li:hover{
+  cursor:pointer;
+}
+
+  /* 서클버튼 */
+#gallery>.nav{
+  position:absolute; right:170px; top:110px;
+  background-color:yellow;
+  overflow:hidden;
+}
+#gallery>.nav>li{
+  float:left;
+  margin-left:15px;
+  cursor:pointer;
+}
+#gallery>.nav>li{
+  width:18px; height:18px;
+  border-radius:50%;
+ 
+  text-indent:-99999px;
+  }
+  #gallery>.nav>li:first-child{
+ 
+}
+  /* 좌우버튼 */
+ #prev{
+  position:absolute;
+  left:0;
+  top:50%;
+  margin-top:-10px;
+  width:50px;height:20px;
+  background:#666;
+  color:#fff;
+  font:bold 15px/20px Arial,sans-serif;
+text-align:center;
+cursor:pointer;}
+ #next{
+  position:absolute;
+  right:0;
+  top:50%;
+  margin-top:-10px;
+  width:50px;height:20px;
+  background:#666;
+  color:#fff;
+  font:bold 15px/20px Arial,sans-serif;
+  text-align:center;
+  cursor:pointer;}
+
+  #info{position:fixed;
+  left:0; top:0;
+  font:bold 25px Arial,sans-serif;
+  color:red;}

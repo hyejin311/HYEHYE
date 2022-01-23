@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+
+</script>
+</head>
+<!-- 1. setInterval() -> setTimeout()-->
+<body>
+  <script>
+    let i = 0;
+    function hap(){
+      document.write(++i,'<br>');
+      setTimeout(hap,1000);
+    }
+    // hap();
+    setTimeout(hap,1000);
+  </script>
+<!-- <script type="text/javascript">
+let i = 0;
+function hap(){
+  document.write(++i,'<br>');
+}
+hap();
+setInterval(hap,1000);
+</script> -->
+</body>
+</html>

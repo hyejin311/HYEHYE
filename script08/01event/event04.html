@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>addEventListener,removeEventListener</title>
+ <style>
+  section{width:500px; 
+  margin: 0 auto;
+  border: 1px solid blue;}
+  div,p {
+    margin: 10px;
+    border: 1px solid blue;
+  }
+</style>
+</head>
+<body>
+ <!-- 이러한 작업을 버블링이라 한다. -->
+
+ <section >section
+  <div>DIV
+    <p>P</p>
+  </div>
+ </section>
+ 
+<script>
+//오브젝트 만들기-> section, div, p 요소//
+// 각각 click 이벤트를 만들기 -> 함수 값 -> 요소명 출력//
+
+const Sec = document.querySelector('section');
+const Div = document.querySelector('div');
+const P = document.querySelector('p');
+//1.버블링 작업//
+//2.이벤트 겹침 문제점 -> 부모, 자식 문제//
+//3.문제점 해결하기//
+//4.이벤트 받기-> 먼저 막기 -> 실행//
+
+function play(e,str){
+e.stopPropagation();
+alert(str);
+};
+
+P.addEventListener('click',function(e){play(event,"p")});
+Div.addEventListener('click',function(e){play(event,"div")});
+Sec.addEventListener('click',function(e){play(event,"sec")});
+
+//버블링 생기는 문제의 예시//
+// P.addEventListener('click',function(e){play('P');});
+// Div.addEventListener('click',function(e){play('Div');});
+// Sec.addEventListener('click',function(e){play('Sec');});
+
+</script>
+</body>
+</html>

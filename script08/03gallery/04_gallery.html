@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>스크롤 갤러리1</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+  <!-- 보이기 -->
+<div id="mas">
+
+  <!-- 전체: 움직임 -->
+<div id="gall">
+
+  <!-- 소스 -> 복제해서 1개 더 만듦. -->
+  <ul class="box">
+  <li>01</li>
+  <li>02</li>
+  <li>03</li></ul>
+</div>
+
+<div id="left"><a href="#">prev</a></div>
+<div id="right"><a href="#">next</a></div>
+</div>
+<script>
+
+//준비하기
+let start = 0;
+let speed = -1;
+const gall = document.querySelector('#gall');
+
+//함수
+function motion(){
+  start += speed;
+  if(start < -300){
+    start = 0;
+  }else if(start > 0){
+    start = -300;
+  }gall.style.left = start + 'px';}
+
+function play(){
+  mm = setInterval(motion,10);
+}
+
+function stop(){
+  clearInterval(mm);
+}
+play();
+
+//복제
+let temp = document.querySelector('.box').cloneNode(true);
+gall.append(temp);
+
+//event
+//방향
+const left = document.querySelector('#left');
+const right = document.querySelector('#right');
+
+left.addEventListener
+('click',function(e){speed *= -1;});
+
+right.addEventListener
+('click',function(e){speed *= -1;});
+
+//타이머 조정
+const Li = document.querySelectorAll('li');
+//Li-> forEach -> mouseover, mouseout stop,play 작동
+
+Li.forEach(function(str){str.addEventListener('mouseover',stop);});
+Li.forEach(function(str){str.addEventListener('mouseout',play);});
+
+</script>
+</body>
+</html>

@@ -24,6 +24,29 @@
     </figure>
 
 <script>
+  // console.log(Box);
+  // console.log(Img);
+// 1.오브젝트: .picBox, picBox>img
+const Box = document.querySelector('.picBox');
+const Img = document.querySelector('.picBox>img');
+
+// 2. 소스만들기 : alt값 가져오기-< tw\ext node 사용
+let Alt = Img.getAttribute('alt');
+console.log(Alt);
+
+// 3. 생성하기 : figcaption, textNode
+let Figcaption = document.createElement('figcaption');
+// console.log(Figcaption);
+let Text= document.createTextNode(Alt);
+console.log(Text);
+
+// 4. child -> 1차 생성 -> figcaption 완성형
+Figcaption.appendChild(Text);
+console.log(Figcaption);
+
+// 5. 완성형 -> figure 완성
+Box.appendChild(Figcaption);
+Img.setAttribute('alt','상세이미지');
 
 </script>
 </body>

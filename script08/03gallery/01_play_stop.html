@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>기본움직임</title>
+<style>
+body { font:12px "나눔고딕"; }
+#box { position: absolute; left: 0px; top: 100px; width: 100px; height: 100px; background:#0cf; }
+</style>
+</head>
+
+<body>
+ <button type="text" class="play">play</button>
+ <button type="text" class="stop">stop</button> 
+
+<div id="box">box</div>
+<script>
+
+  //준비하기
+let num = 0;
+const btnPlay = document.querySelector('.play');
+const btnStop = document.querySelector('.stop');
+
+//함수
+
+//움직임
+function move(){
+num += 1;
+document.querySelector('#box').style.left = num + 'px';
+}
+
+//타이머 작동
+function play(){
+  moveTime = setInterval(move,10);
+}
+
+//타이머 멈춤
+function stop(){
+  clearInterval(moveTime);
+}
+
+//이벤트 정리
+btnPlay.addEventListener('click',play);
+btnStop.addEventListener('click',stop);
+
+</script>
+</body>
+</html>

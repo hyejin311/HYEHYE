@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>부드러운 움직임</title>
+<style type="text/css">
+body { font:12px "나눔고딕","맑은 고딕"; }
+#box { position: absolute; left: 0px; top: 100px; width: 100px; height: 100px; background:#0cf; }
+</style>
+
+<script type="text/javascript">
+//준비//
+let start = 0;
+let targetX = 0;
+
+//움직임//
+function motion(){
+start += 0.1*(targetX - start);
+document.querySelector('#box').style.left = start + 'px';
+}
+
+//타이머//
+function play(){
+  setInterval(motion,10);
+}
+
+//4//
+window.addEventListener('DOMContentLoaded',function(){
+  const btn = document.querySelectorAll('button');
+  btn.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      const data = this.getAttribute('data-value');
+      // console.log(data);
+      // targetX = data;
+      // play(targetX);
+      play(targetX = data);
+  });
+  })
+});
+
+</script>
+</head>
+<body>
+<button type="text" data-value="200">목적지 이동 200</button>
+<button type="text" data-value="600">목적지 이동 600</button>
+<button type="text" data-value="1000">목적지 이동 1000</button>
+<div id="box">box</div>
+
+</body>
+</html>
