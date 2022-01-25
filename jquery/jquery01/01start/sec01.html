@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>start</title>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<p><button  id="btn">버튼</button></p>
+<ul id="list1">
+<li class="a">list1 item a</li>
+<li class="b">list1 item a</li>
+<li class="c">list1 item b</li>
+<li class="d">list1 item b</li>
+</ul>
+<p class="a">class a</p>
+<q>normal 01</q>
+<p class="b">class b</p>
+<p>normal 02</p>
+<p id="first">변경전</p>
+<p id="second">아무것도 없습니다.</p>
+<p class="olde"><strong>변경되었습니다.</strong></p>
+
+<script>
+  $(function(){
+    $('#first').css('color','red');
+    $('btn').click(function(e){
+      $('.olde>strong').html('<em>jquery</em>');
+      $('#second').html('<b>수정되었습니다.</b>').css('color','blue');
+    });
+  });
+</script>
+</body>
+</html>

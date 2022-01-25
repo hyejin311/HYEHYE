@@ -15,9 +15,8 @@ let targetX = 0;
 
 //2번//
 function motion(){
-targetX.addEventListener('#box').style.left = 200;
-targetX.addEventListener('#box').style.left = 600;
-targetX.addEventListener('#box').style.left = 1000;
+  start += 0.1*(targetX - start);
+  document.querySelector('#box').style.left = start + 'px';
 }
 
 //3번//
@@ -26,15 +25,19 @@ function play(){
 }
 
 //4번//
-function btn(){
-  btn = document.getElementsByName('button');
-  btn.forEach(function(){
-    btn.addEventListener('click');
-    targetX = data-value + 200
-  });
+window.addEventListener('DOMContentLoaded',function(){
+  const btn = document.querySelectorAll('button');
+  btn.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      const data = this.getAttribute('data-value');
+    play(targetX = data)
+    })
+  })
+});
 
 </script>
 </head>
+
 <body>
 <button type="text" data-value="200">목적지 이동 200</button>
 <button type="text" data-value="600">목적지 이동 600</button>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>220125과제</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/homework.css">
+</head>
+
+<body>
+<div id ="show">
+  <div id ="all">
+    <ul class="box">
+      <li>01</li>
+      <li>02</li>
+      <li>03</li>
+      <li>04</li>
+    </ul>
+  </div>
+<div id ="left"><a href="#">left</a></div>
+<div id ="right"><a href="#">right</a></div>
+</div>
+
+<script>
+let start = 0;
+let speed = -1;
+const All = document.querySelector('#all');
+
+function motion(){
+  start += speed;
+  if(start < -400){
+    start = 0;
+  }else if(start > 0){
+    start = -400;
+  }
+  All.style.left = start + 'px';
+}
+
+function Play(){
+mm = setInterval(motion,10);
+}
+
+function Stop(){
+clearInterval(mm);
+}
+Play();
+
+let temp = document.querySelector('.box').cloneNode(true);
+All.append(temp);
+
+const Left = document.querySelector('#left');
+const Right = document.querySelector('#right');
+
+Left.addEventListener('click',function(e){
+  speed *= -1;
+});
+
+Right.addEventListener('click',function(e){
+  speed *= -1;
+});
+
+const Li = document.querySelectorAll('li');
+
+Li.forEach(function(str){
+str.addEventListener('mouseover',Stop);
+});
+
+Li.forEach(function(str){
+  str.addEventListener('mouseout',Play);
+});
+
+</script>
+</body>
+</html>
