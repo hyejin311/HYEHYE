@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>2.Dom</title>	
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
 ul{display:none;}
 </style>
-
-
 </head>
+
 <body>
 <button id="btn01">text수정</button>
 <button id="btn02">text가져오기1</button>
@@ -17,8 +16,26 @@ ul{display:none;}
 <p id="first"> text1</p>
 <p id="second"> 시작시간</p>
 <ul>
-<li>오후1시 classA에서 시작합니다.</li>
+<li>오후 1시 classA에서 시작합니다.</li>
 <li>오후 8시 classB에서 시작합니다.</li>
 </ul>
+
+<script>
+$(function(){
+  $('#btn01').click(function(e){
+    $('#first').text('예약이 마감되었습니다.');
+
+    $('#btn02').click(function(e){
+      let room = $('li:first').text();
+      $('#second').text(room);
+
+      $('#btn03').click(function(e){
+        let room = $('li:last').text();
+        $('#second').text(room);
+      });
+    });
+  });
+});
+</script>
 </body>
 </html>

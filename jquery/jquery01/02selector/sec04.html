@@ -3,24 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>선택자4</title>
+<script src="../../js/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
-<H2>title</H2>
+<H2>TITLE</H2>
 <p><button id="btn_01">Click Me</button></p>
 <ul>
-<li id="first" title="a1a"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-<li class="second" title="bb"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-<li id="third" title="cerc"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-<li class="fourth" title="ded"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<li id="first" title="a1a">
+  텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<li class="second" title="bb">
+  텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<li id="third" title="cerc">
+  텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+<li class="fourth" title="ded">
+  텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 </ul>
+
+<script>
+$(function(){
+$('#btn_01').click(function(e){
+$('#first[title^="a"]').css('background-color','pink');
+$('.second[title*="b"]').html('<b>bibi</b>');
+$('#third[title*="c"]').text('smile away');
+$('.fourth[title*="d"]').html('<b>seeu</b>');
+});
+});
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-

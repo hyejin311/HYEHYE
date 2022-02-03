@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>sample</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
 *{margin:0; padding:0;}
 ul,li{list-style:none;}
@@ -13,14 +13,12 @@ li{float:left; padding:10px; border:1px solid #fff;margin:0 10px;
 background:#CC9;}
 img{vertical-align:top;}
 p{text-align:center; margin-bottom:20px;}
-button{padding:10px 0;width:200px;  background:#069; color:#fff; font-size:1.3em; font-weright:900;
-			border:0;margin:0 20px;}
+button{
+	padding:10px 0;width:200px;  background:#069; color:#fff; font-size:1.3em; font-weight:900; border:0; margin:0 20px;}
 </style>
-
-
 </head>
-<body>
 
+<body>
 <div id="box">
 <ul>
 <li><img src="images/pic1.jpg" alt="이미지01"></li>
@@ -33,5 +31,17 @@ button{padding:10px 0;width:200px;  background:#069; color:#fff; font-size:1.3em
 <button id="next">뒤로</button>
 </p>
 </div>
+
+<script>
+$(function(){
+$('#prev').click(function(e){
+$('li:first').appendTo('ul:last');
+
+$('#next').click(function(e){
+	$('li:last').prependTo('ul:first');
+});
+});
+});
+</script>
 </body>
 </html>

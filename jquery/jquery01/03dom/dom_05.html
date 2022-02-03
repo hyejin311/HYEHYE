@@ -3,27 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <title>속성변화</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
 section{width:500px; margin:25px auto; text-align:center;}
 div{display:none;}
 </style>
-
 </head>
+
 <body>
 <section>
 <p class="btn">
 <button id="btn01">이미지 가져오기</button>
 <button id="btn02">링크 변경하기</button></p>
-<p class="box01">
-	<img src="images/img01.png" alt="sample"></p>
-<p class="box02"><a href="http://www.naver.com">다음으로 변경하기</a></p>
 
+<p class="box01">
+<img src="images/img01.png" alt="sample"></p>
+<p class="box02"><a href="http://www.naver.com">다음으로 변경하기</a></p>
 <div>
-	<img src="images/img02.png" alt="sample"></div>
+<img src="images/img02.png" alt="sample"></div>
 </section>
+
+<script>
+$(function(){
+$('#btn01').click(function(e){
+	let pic= $('div>img').attr('src');
+	$('.box01>img').attr('src',pic);
+
+	$('#btn02').click(function(e){
+		$('.box02>a').text('다음사이트').attr('href','http://www.daum.net');
+	});
+});
+});
+</script>
 </body>
 </html>
-
-
-

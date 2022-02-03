@@ -3,23 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <title>2.Dom</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
 ul{display:none;}
 </style>
-<
-
 </head>
+
 <body>
 <button id="btn01">요소 변경</button>
 <button id="btn02">이미지 가져오기</button>
 <p id="first">변경전</p>
 <p id="second"> 이미지 가져오기</p>
 
-
 <ul>
 <li><img src="images/pic_04.jpg" alt="sample01"></li>
 <li><img src="images/pic_03.jpg" alt="sample01"></li>
 </ul>
+
+<script>
+$(function(){
+ $('#btn01').click(function(e){
+   $('#first').text('요소가 변경되었습니다.');
+
+   $('#btn02').click(function(e){
+     let pic = $('li:last').html();
+     $('#second').html(pic);
+   });
+ });
+});
+</script>
 </body>
 </html>

@@ -4,29 +4,35 @@
 <meta charset="UTF-8">
 <title>속성변화</title>
 <style>
-section{width:500px; margin:25px auto; text-align:center;}
+section
+{width:500px; margin:25px auto;
+text-align:center;}
 div{display:none;}
 </style>
+<script src="../../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 <section>
 <p class="btn">
-<button id="btn01">이미지 가져오기</button>
-</p>
+<button id="btn01">이미지 가져오기</button></p>
 <p class="box01">
-	<img src="images/pic1.jpg" alt="sample"></p>
+<img src="images/pic1.jpg" alt="sample"></p>
 <p class="test">1</p>
 </section>
 
+<script>
+$(function(){
+	let i = 1;
+	if(i <= 7){
+		('images/pic'+`${i}`+'.jpg');
+	}
+	$('#btn01').click(function(e){
+	let pic = $('.box01>img').attr('src');
+	
+	$('.box01>img').attr('src',pic);
+});
+});
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

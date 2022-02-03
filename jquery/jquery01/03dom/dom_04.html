@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>속성변화</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <link href="css/reset.css" rel="stylesheet">
 <style>
 section{width:378px; margin:20px auto; border:1px solid #666;}
@@ -12,8 +12,8 @@ section>div{width:100%; padding:25px 0; overflow:hidden;}
 section>div>div{width:110px; margin:0 3px; float:left;}
 section div.box01{border:5px solid #F30; padding:3px; background-color:#FF0;}
 </style>
-
 </head>
+
 <body>
 <section>
 <!-- 버튼-->
@@ -22,19 +22,32 @@ section div.box01{border:5px solid #F30; padding:3px; background-color:#FF0;}
 <button id="btn02">스타일 가져오기2</button>
 </p>
 <!--box-->
+
 <div>
 <div class="box01">
-	<p><img src="images/img01.png" alt="이미지01"></p>
+<p><img src="images/img01.png" alt="이미지01"></p>
 </div>
 <div class="box02">
 <p><img src="images/img02.png" alt="이미지02"></p>	
 </div>
 <div class="box03">
-	<p><img src="images/img03.png" alt="이미지03"></p>
+<p><img src="images/img03.png" alt="이미지03"></p>
 </div>
-
-
 </div>
 </section>
+
+<script>
+$(function(){
+$('#btn01').click(function(e){
+	let pic = $('.box01').css('border');
+	$('.box02').css('border',pic);
+
+	$('#btn02').click(function(e){
+		let pic= $('.box01').css('backgroundColor');
+		$('.box03').css('backgroundColor',pic);
+	});
+});
+});
+</script>
 </body>
 </html>

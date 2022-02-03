@@ -27,7 +27,7 @@ document.querySelector('#gall').append(temp);
 
  //2. 스타일 정리
 document.querySelector('.box').style.width = sWidth * sNum + 'px';
- document.querySelector('#gall').style.width = (sWidth * sNum)*2 + 'px';
+document.querySelector('#gall').style.width = (sWidth * sNum)*2 + 'px';
 
 //3. 타이머 작동
 setInterval(motion,10);

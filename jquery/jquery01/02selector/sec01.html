@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<p><button  id="btn">버튼</button></p>
+<p><button id="btn">버튼</button></p>
 <ul id="list1">
 <li class="a">list1 item a</li>
 <li class="b">list1 item a</li>
@@ -23,15 +23,16 @@
 <p class="olde"><strong>변경되었습니다.</strong></p>
 
 <script>
-  $(function(){
-  $('#btn').click(function(e){
-    $('.a').css('color','pink');
-    $('.c').text('welcome');
-    $('#first').html('<strong>jquery</strong>');
-    $('.olde').text('시작합니다.').css('background-color','yellow');
-  });
-});
+$(function(){
+ $('#btn').click(function(e){
+   $('#list1>.a').css('color','pink');
+   $('p[class^= "b"]').css('background-color','pink');
+   $('p#first').text('변경되었습니다.');
+   $('p#second').html('<mark>아무것도 없습니다.</mark>');
+   $('p.olde').text('마감되었습니다.');
 
+ });
+});
 </script>
 </body>
 </html>

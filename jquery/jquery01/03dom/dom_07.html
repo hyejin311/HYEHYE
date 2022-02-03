@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>HTML삽입 및 변화</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
 section{width:800px; margin:20px auto; padding:20px;}
-p#first{widht:750px; padding:20px; border:3px solid #333;  background:yellow;}
+p#first{width:750px; padding:20px; border:3px solid #333;  background:yellow;}
 ins,strong{color:red;  display:block;}
 p.last{text-align:right;}
 </style>
-
 </head>
+
 <body>
 <section>
 <button id="btn01">버튼</button>
@@ -19,5 +19,17 @@ p.last{text-align:right;}
 본문의 내용입니다.
 </p>
 </section>
+
+<script>
+$(function(){
+ $('#btn01').click(function(e){
+   $('#first')
+   .before('<h1>제목</h1>')
+   .prepend('start')
+   .append('end')
+   .after('THE END')
+ });
+});
+</script>
 </body>
 </html>

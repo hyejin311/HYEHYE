@@ -28,14 +28,14 @@ p{width:600px;
 }
 
 #gall{
-  width:6000px;
+width:6000px;
 position:absolute; left: 0; top:0;
 display:flex;
 flex-wrap: wrap;
 }
 
 #gall>ul.box{
-  width: 3000px;
+width: 3000px;
 display: flex;
 flex-wrap: wrap;
 }

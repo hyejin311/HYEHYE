@@ -14,25 +14,25 @@ padding:5px;margin:5px;}
 </head>
 
 <body>
-<H2>title</H2>
-<p><button id="btn_01">Click Me</button></p>
+<h2>TITLE</h2>
+<p><button id="btn">Click Me!</button></p>
 <ul>
-<li><img src="images/flw_01.jpg" width="150"></li>
-<li><img src="images/flw_02.jpg" width="150"></li>
-<li><img src="images/flw_03.jpg" width="150"></li>
-<li><img src="images/flw_04.jpg" width="150"></li>
-<li><img src="images/flw_05.jpg" width="150"></li>
-<li><img src="images/flw_06.jpg" width="150"></li>
+  <li><img src="images/flw_01.jpg" alt="flw01" width="150"></li>
+  <li><img src="images/flw_02.jpg" alt="flw02" width="150"></li>
+  <li><img src="images/flw_03.jpg" alt="flw03" width="150"></li>
+  <li><img src="images/flw_04.jpg" alt="flw04" width="150"></li>
+  <li><img src="images/flw_05.jpg" alt="flw05" width="150"></li>
+  <li><img src="images/flw_06.jpg" alt="flw06" width="150"></li>
 </ul>
 
 <script>
   $(function(){
-    $('#btn_01').click(function(e){
-      $('li:eq(2)').css('border','2px solid red');
-      $('li:lt(2)').css('border','2px solid blue');
-      $('li:gt(2)').css('border','2px solid yellow');
-      $('li:even').css('background-color','pink');
-      $('li:odd').css('background-color','#666');
+    $('#btn').click(function(e){
+      $('li:eq(3)').css('border','3px dotted green');
+      $('li:lt(3)').css('border','3px solid pink');
+      $('li:gt(3)').css('border','3px double purple');
+      $('li:even').css('background-color','brown');
+      $('li:odd').css('background-color','gray');
     });
   });
 </script>

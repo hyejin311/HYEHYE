@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>test gallery</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="../../jquery/js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    
+<div id="test">
+<div class="show">
+<div id="all">
+<ul class="box">
+<li><img src="images/img_01.jpg" alt="01"></li>
+<li><img src="images/img_02.jpg" alt="02"></li>
+<li><img src="images/img_03.jpg" alt="03"></li>
+<li><img src="images/img_04.jpg" alt="04"></li>
+<li><img src="images/img_05.jpg" alt="05"></li>
+<li><img src="images/img_06.jpg" alt="06"></li>
+</ul>
+</div>
+</div>
+
+<button id="prev">prev</button>
+<button id="next">next</button>
+</div>
+
+<script>
+$(function(){
+$('#prev').click(function(e){
+$('li:last').prependTo('ul:first');
+
+$('#next').click(function(e){
+$('li:first').appendTo('ul:last');
+});
+});
+});
+
+</script>
 </body>
 </html>
