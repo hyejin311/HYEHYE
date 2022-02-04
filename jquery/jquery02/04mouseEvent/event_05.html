@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+p { background:yellow; font-weight:bold; cursor:pointer;
+padding:5px; }
+p.over { background: #ccc; }
+span { color:red; }
+</style>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <p>Click or double click here.</p>
+<span></span>
+ 
+<script>
+  $(function(){
+    $('p').on('click',function(e){
+      alert('welcome');
+    });
+    $('p').off('click');
+  });
+</script>
+</body>
+</html>

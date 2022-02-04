@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>둘러싸기</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
 p{width:500px; padding:10px; margin:20px; border:3px solid #36F;}
 </style>
-
 </head>
+
 <body>
 <p>
 <button id="btn01">버튼</button>
@@ -16,11 +16,32 @@ p{width:500px; padding:10px; margin:20px; border:3px solid #36F;}
 <button id="btn03">inner</button>
 <button id="btn04">remove</button>
 </p>
+
 <div>
 <strong> 텍스트텍스트</strong>
 <strong> 텍스트텍스트</strong>
 <em>나만 틀려요</em>
 <strong> 텍스트텍스트</strong>
 </div>
+
+<script>
+  $(function(){
+   $('#btn01').click(function(e){
+     $('strong').wrap('<p>');
+   });
+
+   $('#btn02').click(function(e){
+     $('strong').wrapAll('<p>');
+   });
+   
+   $('#btn03').click(function(e){
+    $('div').wrapInner('<p>');
+   });
+
+   $('#btn04').click(function(e){
+     $('strong').unwrap();
+   });
+  });
+</script>
 </body>
 </html>

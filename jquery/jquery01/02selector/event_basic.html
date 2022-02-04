@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>event</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
 p{margin:0; padding:0;}
 div{width:700px; height:70px; margin:0 auto 25px; overflow:hidden;}
@@ -14,7 +14,6 @@ p.back{width:450px; height:66px; border:2px solid #333; float:right;}
 </head>
 
 <body>
-
 <div id="box_01">
 <p class="button">click</p>
 <p class="back"></p>
@@ -48,13 +47,46 @@ p.back{width:450px; height:66px; border:2px solid #333; float:right;}
 div#box_01 p.button을 클릭하면 div#box_01 p.back의 백그라운드 칼라를 red
 div#box_02 p.button을 더블클릭하면 div#box_02 p.back의 백그라운드 칼라를 yellow
 div#box_03 p.button을 마우스를 다운하면 div#box_03 p.back의 백그라운드 칼라를 green,마우스를 업하면  orange
-div#box_04 p.button을 위에 놓으면하면 div#box_04 p.back의 백그라운드 칼라를 blue
+div#box_04 p.button을 위에 놓으면 div#box_04 p.back의 백그라운드 칼라를 blue
 div#box_05 p.button을 위에 놓으면2  div#box_05 p.back의 백그라운드 칼라를 pink
 div#box_06 p.button을 위에 놓으면3  div#box_06 p.back의 백그라운드 칼라를 black
 
 div>p의 첫번째 에 마우스가 떠나면 p.back의 백그라운드 칼라를화이트
 
 -->
+<script>
+  $('#box_01>.button').on('click',function(e){
+  $('#box_01>p.back').css('background','red');
+  });
 
+  $('#box_02>.button').dblclick(function(e){
+  $('#box_02>p.back').css('background','yellow');
+  });
+
+  $('#box_03>.button')
+  .mousedown(function(e){
+  $('#box_03>p.back').css('background','green');
+  })
+  
+  .mouseUp(function(e){
+  $('#box_03>p.back').css('background','orange');
+  return false;
+  });
+
+  $('#box_04>.button')
+  .mouseenter(function(e){
+  $('#box_04>p.back').css('background','blue');
+  });
+
+  $('#box_05>.button')
+  .mouseenter(function(e){
+  $('#box_05>p.back').css('background','pink');
+  });
+
+  $('#box_06>.button')
+  .mouseenter(function(e){
+  $('#box_06>p.back').css('background','black');
+  });
+</script>
 </body>
 </html>

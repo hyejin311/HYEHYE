@@ -16,13 +16,11 @@ let targetX = 0;
 //2번//
 function motion(){
   start += 0.1*(targetX - start);
-  document.querySelector('#box').style.left = start + 'px';
-}
+  document.querySelector('#box').style.left = start + 'px';}
 
 //3번//
 function play(){
-  setInterval(motion,10);
-}
+  setInterval(motion,10);}
 
 //4번//
 window.addEventListener('DOMContentLoaded',function(){
@@ -34,7 +32,6 @@ window.addEventListener('DOMContentLoaded',function(){
     })
   })
 });
-
 </script>
 </head>
 

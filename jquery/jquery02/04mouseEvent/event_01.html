@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event:a 요소 사용하기</title>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<button id="btn01">화면을 변경</button>
+<span><a href="img/sea.jpg">화면 변경</a></span>
+<p><img id="img01" src="img/flower.jpg" alt="꽃"></p>
+
+<script>
+$(function(){
+$('#btn01').on('click',function(e){
+$('p>img').attr('src','img/sea.jpg');
+
+//얘는 왜 안될까요?
+// let pic= $('p>img').attr('src','img/Jellyfish.jpg');
+// $('p>img').attr('src',pic);
+});
+
+$('span>a').on('click',function(e){
+$('p>img').attr('src','img/building.jpg');
+
+//맨 마지막에 사용해야 함.//
+return false;
+});
+});
+</script>
+</body>
+</html>

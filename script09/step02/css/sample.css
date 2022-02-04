@@ -3,7 +3,8 @@
 h1{width:600px;
   text-align:center;
   margin: 0 auto;
-padding:25px 0;color:#daa316;}
+  padding:25px 0;
+  color:#daa316;}
 
 p{width:600px;
   text-align:center;
@@ -42,7 +43,6 @@ flex-wrap: wrap;
 
 #gall>ul.box>li{
   /* width:600px; */
-
 }
 
 #gall>ul.box>li:hover{
@@ -66,8 +66,8 @@ flex-wrap: wrap;
  
   text-indent:-99999px;
   }
+
   #gallery>.nav>li:first-child{
- 
 }
   /* 좌우버튼 */
  #prev{
@@ -79,9 +79,10 @@ flex-wrap: wrap;
   background:#666;
   color:#fff;
   font:bold 15px/20px Arial,sans-serif;
-text-align:center;
-cursor:pointer;}
- #next{
+  text-align:center;
+  cursor:pointer;}
+
+#next{
   position:absolute;
   right:0;
   top:50%;

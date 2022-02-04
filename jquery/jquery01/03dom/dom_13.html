@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>바꾸기</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 <button id="btn01">replace</button>
 <button id="btn02">html</button>
@@ -12,12 +13,50 @@
 <button id="btn04">empty</button>
 <button id="btn05">clone</button>
 <button id="btn06">detach</button>
-<p class="no01">요소바꾸기바꾸어 주세요. </p>
-<p class="no02">콘텐츠바꾸기바꾸어 주세요. </p>
+
+<p class="no01">요소바꾸기 바꾸어주세요.</p>
+<p class="no02">콘텐츠바꾸기 바꾸어주세요.</p>
 <p class="no03">없애기</p>
-<p class="no04">비우기 </p>
-<p class="no05">채우기 </p>
+<p class="no04">비우기</p>
+<p class="no05">채우기</p>
 <p class="no06">복제하기</p>
 <p class="no07">자르기</p>
+
+<script>
+$(function(){
+  
+  //replaceWith()
+  $('#btn01').click(function(e){
+  $('.no01').replaceWith('<h1>welcome</h1>');
+});
+
+$('#btn02').click(function(e){
+  $('.no02').html('<mark>hi!</mark>');
+});
+
+$('#btn03').click(function(e){
+//remove 선택자 콘텐츠 모두 없애버림//
+  $('.no03').remove();
+});
+
+$('#btn04').click(function(e){
+//empty 콘텐츠만 비워짐//
+  $('.no04').empty();
+});
+
+$('#btn05').click(function(e){
+  let room= $('.no06').clone();
+  console.log(room);
+  $('.no05').prepend(room);
+});
+
+$('#btn06').click(function(e){
+  let room= $('.no07').detach();
+  console.log(room);
+  $('.no05').append(room);
+});
+
+});
+</script>
 </body>
 </html>

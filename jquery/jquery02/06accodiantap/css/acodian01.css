@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+dl{width:600px; margin:30px auto 0; background:red;}
+dl>dt{/* width:auto; */ height:35px;
+			background:#cc9900;
+			border-bottom:1px solid #fff;
+			font:bold 15px/35px '나눔고딕',NanumGothic,'돋움',Dotum,sans-serif;
+			text-indent:20px;
+			color:#fff;
+			cursor:pointer;}
+dl>dd{height: 250px; padding:20px;
+				box-sizing:border-box;
+				background-color:#ffff99;}
+dl>dd>p{font:14px/20px Arial,sans-serif;	
+						color:#666;}
+/*준비작업*/
+
+dt.selected{background-color:#9326ff;}
+dt.over{background-color:#238c00;}
+
+
+
+
+
+
+
+
+
+
+

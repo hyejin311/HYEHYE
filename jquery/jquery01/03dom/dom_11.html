@@ -1,10 +1,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <title>this와 토글</title>
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <style>
-p { margin: 4px; font-size:16px; font-weight:bolder;
+p{ margin: 4px; font-size:16px; font-weight:bolder;
 cursor:pointer; }
 .blue { color:blue; }
 .highlight { background:yellow; }
@@ -17,5 +17,13 @@ cursor:pointer; }
 <p class="blue highlight">highlight</p>
 <p class="blue">on these</p>
 <p class="blue">paragraphs</p>
+
+<script>
+  $(function(){
+    $('p').click(function(e){
+      $(this).toggleClass('highlight');
+    });
+  });
+</script>
 </body>
 </html>

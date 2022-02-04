@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+section{width:500px; padding:30px; border:1px solid #000;
+					margin:20px auto; position:relative;}
+					
+section>h1{width:100%; margin-bottom:25px; text-align:center; 
+							font-size:1.5em; color:#63C;}
+/*버튼*/		
+section>p{position:absolute; top:200px;}	
+section>p#prev{left:-15px;}
+section>p#next{right:-15px;}				
+/*보이는 블럭*/
+div#view{width:400px; margin:0 auto; 
+					border:1px solid #000; 
+					/*overflow:hidden;*/}	
+/*전체*/						
+div#view>ul{width:???px; height:250px; }
+/*소스*/
+div#view li{width:400px; }									
