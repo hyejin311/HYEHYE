@@ -3,41 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>Tab</title>
-
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/tab01.css" rel="stylesheet">
+<script src="../../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 <div id="container">
 <ul class="tab">
-  <li><a href="#">tab01</a></li>
-  <li><a href="#">tab02</a></li>
-  <li><a href="#">tab03</a></li>
-  <li><a href="#">tab04</a></li>
-  <li><a href="#">tab05</a></li>
+  <li><a href="#box01">tab01</a></li>
+  <li><a href="#box02">tab02</a></li>
+  <li><a href="#box03">tab03</a></li>
+  <li><a href="#box04">tab04</a></li>
+  <li><a href="#box05">tab05</a></li>
 </ul>
+
 <ul class="content">
-  <li id="#">
+  <li id="box01">
             <strong>body01</strong> The delicate cherry blossoms along DC s National Mall have drawn generations of viewers since 1912. A gift from Japan, the flowering trees symbolise friendship, and each year, Washington DC hosts the National Cherry Blossom Festival. A parade of elaborate floats, marching bands and giant helium balloons will make its way down Constitution Avenue on 13 April from 10 am to noon. (Comso Condina/Getty)
   </li>
-  <li id="#">
+  <li id="box02">
             <strong>body02</strong> The delicate cherry blossoms along D s National Mall have drawn generations of viewers since 1912. A gift from Japan, the flowering trees symbolise friendship, and each year, Washington DC hosts the National Cherry Blossom Festival. A parade of elaborate floats, marching bands and giant helium balloons will make its way down Constitution Avenue on 13 April from 10 am to noon. (Comso Condina/Getty)
   </li>
-  <li id="#">
+  <li id="box03">
             <strong>body03</strong> The delicate cherry blossoms along DC s National Mall have drawn generations of viewers since 1912. A gift from Japan, the flowering trees symbolise friendship, and each year, Washington DC hosts the National Cherry Blossom Festival. A parade of elaborate floats, marching bands and giant helium balloons will make its way down Constitution Avenue on 13 April from 10 am to noon. (Comso Condina/Getty)
   </li>
-  <li id="#">
+  <li id="box04">
             <strong>body04</strong> The delicate cherry blossoms along DC s National Mall have drawn generations of viewers since 1912. A gift from Japan, the flowering trees symbolise friendship, and each year, Washington DC hosts the National Cherry Blossom Festival. A parade of elaborate floats, marching bands and giant helium balloons will make its way down Constitution Avenue on 13 April from 10 am to noon. (Comso Condina/Getty)
   </li>
-  <li id="#">
+  <li id="box05">
 <strong>body05</strong> The delicate cherry blossoms along DC s National Mall have drawn generations of viewers since 1912. A gift from Japan, the flowering trees symbolise friendship, and each year, Washington DC hosts the National Cherry Blossom Festival. A parade of elaborate floats, marching bands and giant helium balloons will make its way down Constitution Avenue on 13 April from 10 am to noon. (Comso Condina/Getty)
   </li>
 </ul>
 </div>
 
+<script>
+  $(function(){
+    // 준비하기//
+   $('.tab>li:first>a').addClass('selected');
+   $('.content>li:not(:first)').hide();
+   $('.tab>li>a').on('click',function(e){
+     let str = $(this).attr('href');
+     console.log(str);
+     
+     $('.content>li').hide();
+     $(str).show();
+
+     $('.tab>li>a').removeClass('selected');
+     $(this).addClass('selected');
+     return false;
+   });
+  })
+</script>
 </body>
 </html>
-
-
-
-

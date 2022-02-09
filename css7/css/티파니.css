@@ -8,7 +8,7 @@
 
 #wrap{}
 #headerWrap{
-  background-color:rgb(129,216,208);
+background-color:rgb(129,216,208);
 padding:24px 0;}
 
 header{
@@ -67,20 +67,23 @@ background-color: green;}
 }
 
 nav>ul{
-  width:1330px;
+width:1330px;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 }
+
 nav>ul>li{
   margin:0 10px;
   position:relative;
 }
+
 nav>ul>li>a{
   padding: 0 77px;
   font-size:18px;
   color:#fff;
 }
+
 nav>ul>li>ul{
 position:absolute;
 width:100%;
@@ -157,18 +160,41 @@ article>h3.box02{
 article>h3.box02>div{
   width:1370px;  height: 100%;
   margin:0 auto;
+  display:flex;
+  align-items:center;
   background: url('../images/gifts_gifts2_bg1.png') no-repeat left top,
   url('../images/gifts_gifts2_bg2.png') no-repeat right bottom;
 }
 
 article>h3.box02>div>span{
-  display:block;
-  position:absolute;
-  top:50%; left:0;
-  width:100%;
-  margin-top:-39.6px;
-  font:bold 79px/79px 'Times no roman', serif;
+  text-align: center;
+  font: bold 80px 'Times new roman', serif;
   color:#fff;
+  width:100%;
+  display:block;
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+}
+
+section.box02{
+  width: 927px;
+  background-color: #fff;
+  padding: 35px 0;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+section.box02 figure{
+  width: 220px;
+  background-color:rgb(242,242,242);
+  padding: 25px 0 5px;
   text-align:center;
-  text-shadow:3px 3px 5px rgba(0,0,0,0.5);
+}
+
+section.box02 figure img{
+margin-bottom: 10px;
+font: bold 17px Arial,sans-serif;
+text-align: center;
+color:rgb(102,102,102);
 }

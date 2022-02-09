@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>sample</title>
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 <!--콜백함수-->
 <style type="text/css">
 section{width:500px; margin:20px auto;}
@@ -17,6 +17,7 @@ display:none;
 }
 </style>
 </head>
+
 <body>
 <section>
 <div id="box01">
@@ -29,13 +30,21 @@ display:none;
 </div>
 </section>
 
+<script>
+$(function(){
+  //콜백함수 사용 X : slideDown -> style 변경//
+  $('.btn01').on('click',function(e){
+    $('.back01').slideDown(500);
+    $('.back01').css('background-color','yellow');
+    });
 
+    //콜백함수 사용//
+    $('.btn02').on('click',function(e){
+      $('.back02').slideDown(500,function(){
+        $(this).css('background-color','green');
+      });
+    });
+  });
+</script>
 </body>
 </html>
-
-
-
-
-
-
-

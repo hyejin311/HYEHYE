@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>gallery_slide</title>
+<link href="css1/reset.css" rel="stylesheet">
+<link href="css1/gallery.css" rel="stylesheet">
+<script src="../../../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<section>
+<h1>Slide Gallery</h1>
+        <p id="prev"><img src="img/prev.png" alt="앞으로"></p>
+        <p id="next"><img src="img/next.png" alt="뒤로"></p>
+<div id="view">
+        <ul id="source">
+        <li><img src="img/pic01.jpg" alt="화보1"></li>
+        <li><img src="img/pic02.jpg" alt="화보3"></li>
+        <li><img src="img/pic03.jpg" alt="화보4"></li>
+        <li><img src="img/pic04.jpg" alt="화보5"></li>
+        <li><img src="img/pic05.jpg" alt="화보6"></li>
+        </ul>
+</div>
+</section>
+
+<script>
+$(function(){
+//준비하기//
+$('#source>li:last').prependTo('#source');
+$('#source').css('margin-left','-400px');
+
+//클릭 시 next -? += 400px
+$('#next').on('click',function(e){
+$('#source').animate({marginLeft : '+=400px'},500,function(){
+$('#source>li:last').prependTo('#source');
+
+$('#source').css('marginLeft','-400px');
+});
+});
+
+//prev//
+$('#prev').on('click',function(e){
+$('#source').animate({marginLeft : '-=400px'},500,function(){
+$('#source>li:first').appendTo('#source');
+$('#source').css('marginLeft','-400px');
+});
+});
+
+function ani(){
+$('#source').animate({marginLeft : '-=400px'},500,function(){
+$('#source>li:first').appendTo('#source');
+$('#source').css('marginLeft','-400px');
+});
+}
+//타이머 함수//
+function timer(){
+str = setInterval(ani,1500);
+}
+function stop(){
+clearInterval(str);
+}
+timer();
+})
+</script>
+</body>
+</html>

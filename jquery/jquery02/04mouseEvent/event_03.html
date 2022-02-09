@@ -37,16 +37,16 @@
 $(function(){
 $('#prev').on('click',function(e){
 $('li:first').appendTo('ul');
+});
 
 $('#next').on('click',function(e){
 $('li:last').prependTo('ul');
+});
 
 $('li>a').on('click',function(e){
   let pic= $(this).attr('href');
   $('#bigImage>img').attr('src',pic);
   return false;
-});
-});
 });
 });
 </script>

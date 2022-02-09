@@ -3,19 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <title>sample</title>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
 <div>
-	<ul>
-		<li  id="flower"><img src="img/flower.jpg" alt="flower"></li>
-		<li  id="building"><img src="img/building.jpg" alt="building"></li>
-	</ul>
+<ul>
+<li id="flower"><img src="img/flower.jpg" alt="flower"></li>
+<li id="building"><img src="img/building.jpg" alt="building"></li>
+</ul>
 </div>
+
+<script>
+$(function(){
+	$('#flower').on('click',function(e){
+		$('div>ul').animate({marginLeft: '-400px'});
+
+$('#building').on('click',function(e){
+	$('div>ul').animate({marginLeft: '0px'});
+});
+});
+});
+</script>
 </body>
 </html>
-
-
-
-

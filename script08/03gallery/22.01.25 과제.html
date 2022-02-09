@@ -4,71 +4,75 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>220125과제</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/homework.css">
+  <title>갤러리</title>
 </head>
 
 <body>
-<div id ="show">
-  <div id ="all">
+<div id="show">
+  <div id="all">
     <ul class="box">
-      <li>01</li>
-      <li>02</li>
-      <li>03</li>
-      <li>04</li>
-    </ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li></ul>
   </div>
-<div id ="left"><a href="#">left</a></div>
-<div id ="right"><a href="#">right</a></div>
+<div id="left"><a href="#">left</a></div>
+<div id="right"><a href="#">right</a></div>
 </div>
 
 <script>
-let start = 0;
+//1.준비하기//
+let start= 0;
 let speed = -1;
 const All = document.querySelector('#all');
 
+//2.움직임//
 function motion(){
   start += speed;
   if(start < -400){
-    start = 0;
+    start =0;
   }else if(start > 0){
     start = -400;
   }
-  All.style.left = start + 'px';
+  All.style.left = start +'px';
 }
-
-function Play(){
-mm = setInterval(motion,10);
-}
-
-function Stop(){
-clearInterval(mm);
-}
-Play();
 
 let temp = document.querySelector('.box').cloneNode(true);
 All.append(temp);
 
-const Left = document.querySelector('#left');
-const Right = document.querySelector('#right');
+//3.타이머//
+function Play(){
+  vv= setInterval(motion,10);
+}
 
-Left.addEventListener('click',function(e){
-  speed *= -1;
-});
+function Stop(){
+  clearInterval(vv);
+}
+Play();
 
-Right.addEventListener('click',function(e){
-  speed *= -1;
-});
-
+//4.li 마우스이벤트 설정//
 const Li = document.querySelectorAll('li');
 
 Li.forEach(function(str){
-str.addEventListener('mouseover',Stop);
+  str.addEventListener('mouseover',Stop);
 });
 
 Li.forEach(function(str){
   str.addEventListener('mouseout',Play);
+});
+
+//5. 방향 버튼 설정//
+const LI = document.querySelector('#left');
+const RI = document.querySelector('#right');
+
+LI.addEventListener('click',function(e){
+  speed *= -1;
+});
+
+RI.addEventListener('click',function(e){
+  speed *= -1;
 });
 
 </script>

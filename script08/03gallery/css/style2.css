@@ -3,12 +3,13 @@ body,ul,li {margin:0;padding:0;}
 ul {list-style:none;}
 
 body{
-	font: bold 20px "나눔고딕","맑은 고딕","돋움"; color:#767676; }
+font: bold 20px "나눔고딕","맑은 고딕","돋움"; color:#767676;}
 
 a{
-text-decoration:none; color:#767676; font-size:11px; outline:none; }
+text-decoration:none; color:#767676;
+font-size:11px; outline:none;}
 
-a:hover { color:orange; }
+a:hover {color:orange; }
 /* 보이는 크기:overflow:hidden :  */
 
 #mas

@@ -6,11 +6,11 @@ h1{width:600px;
   padding:25px 0;
   color:#daa316;}
 
-p{width:600px;
+/* p{width:600px;
   text-align:center;
-  margin: 0 auto;}
+  margin: 0 auto;} */
 
-  #gallery{
+#gallery{
   width:900px;
   margin: 0 auto;
   border: 1px dashed #1dbac9;
@@ -19,7 +19,7 @@ p{width:600px;
 }
 
   /* gallery */
-#gallery>.mas{
+#gallery>.show{
   position:relative;
   width:600px;
   height:327px;
@@ -42,12 +42,10 @@ flex-wrap: wrap;
 }
 
 #gall>ul.box>li{
-  /* width:600px; */
-}
+  /* width:600px; */}
 
 #gall>ul.box>li:hover{
-  cursor:pointer;
-}
+  cursor:pointer;}
 
   /* 서클버튼 */
 #gallery>.nav{
@@ -63,13 +61,12 @@ flex-wrap: wrap;
 #gallery>.nav>li{
   width:18px; height:18px;
   border-radius:50%;
- 
   text-indent:-99999px;
   }
 
-  #gallery>.nav>li:first-child{
-}
-  /* 좌우버튼 */
+  #gallery>.nav>li:first-child{}
+
+/* 좌우버튼 */
  #prev{
   position:absolute;
   left:0;
