@@ -4,43 +4,84 @@
 <meta charset="UTF-8">
 <title>gallery2</title>
 <link href="css/reset.css" rel="stylesheet">
-
+<link rel="stylesheet" href="css/gallery.css">
+<script src="../../../js/jquery-3.6.0.min.js"></script>
+<script src="../../../js/jquery-ui.min.js"></script>
 </head>
+
 <body>
 <div id="all">
-    
-<p id="prev"><img src="img/prev.png"></p>
-<p id="next"><img src="img/next.png"></p>
 
-<ul class="page">
+<div id="show">
+<ul class="page1">
 <li><a href="#"><img src="img/page1.jpg"></a></li>
 <li><a href="#"><img src="img/img_11.jpg"></a></li>
 <li><a href="#"><img src="img/img_12.jpg"></a></li>
 <li><a href="#"><img src="img/img_13.jpg"></a></li>
 </ul>
 
-<ul class="page">
+<ul class="page2">
 <li><a href="#"><img src="img/page2.jpg" ></a></li>
 <li><a href="#"><img src="img/img_20.jpg" ></a></li>
 <li><a href="#"><img src="img/img_14.jpg" ></a></li>
 <li><a href="#"><img src="img/img_11.jpg" ></a></li>
 </ul>
 
-<ul class="page">
+<ul class="page3">
 <li><a href="#"><img src="img/page3.jpg" ></a></li>
 <li><a href="#"><img src="img/img_17.jpg" ></a></li>
 <li><a href="#"><img src="img/img_15.jpg" ></a></li>
 <li><a href="#"><img src="img/img_16.jpg" ></a></li>
 </ul>
 
-<ul class="page">
+<ul class="page4">
 <li><a href="#"><img src="img/page4.jpg" ></a></li>
 <li><a href="#"><img src="img/img_17.jpg" ></a></li>
 <li><a href="#"><img src="img/img_18.jpg" ></a></li>
 <li><a href="#"><img src="img/img_19.jpg" ></a></li>
 </ul>
-    
+<p id="prev"><img src="img/prev.png"></p>
+<p id="next"><img src="img/next.png"></p>
+</div>
 </div>
 
+<script>
+$(function(){
+let liWidth= $('#show>ul').width();
+console.log(liWidth);
+
+// function ani(){
+// $('#show>ul').animate({marginLeft: '-=800px'},500,function(){
+// $('#show:first').appendTo('#show').css('marginLeft','-'+marginLeft+ 'px');
+// });
+// }
+
+$('#prev').on('click',function(e){
+$('ul:last').prependTo('#show');
+});
+$('#next').on('click',function(e){
+$('ul:first').appendTo('#show');
+});
+
+function Play(){
+str = setInterval(500);
+}
+function stop(){
+clearInterval(str);
+}
+
+$('#show>ul').each(function(){
+$(this).on('mouseleave',function(e){
+Play();
+});
+});
+
+$('#show>ul').each(function(){
+$(this).on('mouseenter',function(e){
+stop();
+});
+});
+});
+</script>
 </body>
 </html>

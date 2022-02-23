@@ -5,6 +5,7 @@
 <title>event</title>
 <script src="../../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 <button>li 요소를 추가</button>
 <ul id="linkBtn">
@@ -15,24 +16,17 @@
 <p><img src="img/flower.jpg" alt="꽃"></p>
 
 <script>
-  $(function(){
-    // $('li>a').on('click',function(e){
-    //   let pic= $(this).attr('href');
-    //   $('p>img').attr('src',pic);
-    //   return false;
-    // });
-
-    //body로 영역을 확대하면 빌딩 사진도 문제없이 작동됨.
-    $('body').on('click','li>a',function(e){
-      let pic= $(this).attr('href');
-      $('p>img').attr('src',pic);
-      return false;
+$(function(){
+  $('button').on('click',function(e){
+    $('#linkBtn').append('<li><a href="img/building.jpg">빌딩</a></li>');
     });
 
-    $('button').on('click',function(e){
-      $('ul').append('<li><a href="img/building.jpg">빌딩</a></li>');
-    });
-  });
+$('body').on('click','li>a',function(e){
+let pic= $(this).attr('href');
+$('p>img').attr('src',pic);
+return false;
+});
+})
 </script>
 </body>
 </html>

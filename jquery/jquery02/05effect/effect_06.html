@@ -20,12 +20,11 @@
 <script>
 $(function(){
 	$('#flower').on('click',function(e){
-		$('div>ul').animate({marginLeft: '-400px'});
-
-$('#building').on('click',function(e){
-	$('div>ul').animate({marginLeft: '0px'});
-});
-});
+		$('div>ul').animate({marginLeft:'-=400px'},500)
+	});
+	$('#building').on('click',function(e){
+		$('div>ul').animate({marginLeft:'0px'},500)
+	});
 });
 </script>
 </body>

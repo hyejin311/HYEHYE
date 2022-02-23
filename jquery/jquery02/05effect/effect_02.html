@@ -22,14 +22,11 @@ display:none;}
  
 <script>
 $(function(){
-	//$('선택자:not(:animated)')로 광클릭 문제 막기//
-	
-$('#show').on('click',function(e){
-$('#back_01:not(:animated)').slideDown(3000);
-
-$('#hide').on('click',function(e){
-$('#back_01:not(:animated)').slideUp(3000);
-});
+	$('#show').on('click',function(e){
+		$('#back_01:not(:animated)').slideDown(500);
+	});
+	$('#hide').on('click',function(e){
+		$('#back_01:not(:animated)').slideUp(500);
 });
 });
 </script>

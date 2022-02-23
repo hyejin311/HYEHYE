@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>galleyr_basic</title>
+<title>gallery_basic</title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/gallery.css">
 <script src="../../js/jquery-3.6.0.min.js"></script>
@@ -18,13 +18,14 @@
 <li><a href="img/img_01.jpg"><img src="img/img_01.jpg" width="140" height="105" ></a></li>
 <li><a href="img/img_02.jpg"><img src="img/img_02.jpg" width="140" height="105" ></a></li>
 <li><a href="img/img_03.jpg"><img src="img/img_03.jpg" width="140" height="105" ></a></li>
-<li><a href="img/img_10.jpg"><img src="img/img_10.jpg" width="140" height="105" ></a></li>
+<li><a href="img/img_04.jpg"><img src="img/img_04.jpg" width="140" height="105" ></a></li>
 <li><a href="img/img_05.jpg"><img src="img/img_05.jpg" width="140" height="105" ></a></li>
 <li><a href="img/img_06.jpg"><img src="img/img_06.jpg" width="140" height="105" ></a></li>
 </ul>  
 </div>
 
-<p><img src="img/prev.png" class="prev">
+<p>
+<img src="img/prev.png" class="prev">
 <img src="img/next.png" class="next"></p>
 </div>
 <!--추가분-->
@@ -37,17 +38,23 @@
 <script>
 $(function(){
 $('li>a').on('click',function(e){
-let pic=$(this).attr('href');
-console.log(pic);
+  let pic=$(this).attr('href');
+  console.log(pic);
+
+// $('p>img.prev').on('click',function(e){
+//   $('li>a:last').prependTo('ul');
+// });
+// $('p>img.next').on('click',function(e){
+//   $('li>a:first').appendTo('ul');
+// });
 
 $('#main').prepend('<img src="'+pic+'" alt="상세이미지">');
-$('#main>img:last').fadeOut(400,function(){
+$('#main>img:last').fadeOut(500,function(){
 $('#main>img:not(:eq(0))').remove();
-// $(this).remove();
 });
 return false;
 });
-});
+})
 </script>
 </body>
 </html>

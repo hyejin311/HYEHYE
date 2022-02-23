@@ -1,0 +1,128 @@
+@charset "utf-8";
+@font-face{
+  font-family:'webfont01';
+  src:url('../font/Neo\ Sans\ Pro\ Light.eot') format('embedded-opentype'),
+      url('../font/Neo\ Sans\ Pro\ Light.ttf') format('truetype');
+}
+.hideClass{
+  width:0; height:0;
+  font-size:0; line-height: 0;
+  position:absolute;
+  visibility:hidden;
+}
+/* 공용파트 */
+img{max-width:100%;}
+div#wrap>div>article{
+  width:960px;
+  margin:0 auto;
+  padding:75px 0 65px;
+}
+
+/* box03 */
+#box03{
+    width:960px;
+  margin:0 auto;
+  padding:75px 0 65px;
+}
+/*  갤러리 overflow */
+#box03>article>div>ul{
+  display:flex;
+  justify-content: space-around;
+}
+#box03>article>div>ul>li{}
+#box03>article ul>li>figure{
+  width:230px;
+  margin: 0 auto;
+}
+#box03>article ul>li>figure>img{
+  border-radius:50%;
+  margin-bottom:22px;
+}
+#box03>article ul>li>figure dl{
+  text-align:center;
+  font:15px '나눔고딕',Arial,sans-serif;
+  color:#333;
+}
+#box03>article ul>li>figure dl>dt{
+  font-weight:bold;
+  margin-bottom:17px;
+}
+#box03>article ul>li>figure dl>dd{
+  line-height:20px;
+}
+
+
+/* modal */
+#modal{
+position:fixed;
+width:100%; height:100%;
+left:0; top:0;
+background-color:rgba(0,0,0,0.7);
+z-index:9999;
+display:none;
+}
+#modal>div{
+ width:640px;
+ position:fixed;
+ left:50%;
+ top:50%;
+background-color:red;
+margin:-200px 0 0 -320px;
+padding:20px;
+box-sizing:border-box;
+
+}
+#modal>div>h3{
+font:bold 25px '나눔고딕', sans-serif;
+color:#fff;
+text-align:center;
+margin-bottom:20px;
+}
+#modal>div>figure{
+  /* background-color:yellow; */
+  overflow:hidden;
+}
+#modal>div>figure>img{
+  width:250px;
+  float:left;
+  display:block;
+}
+#modal>div>figure>figcaption{
+  width:335px;
+  float:right;
+}
+#modal>div>figure dl{}
+#modal>div>figure dl>dt{
+  font:bold 18px '나눔고딕',sans-serif;
+  color:#fff;
+  margin-bottom:5px;
+}
+#modal>div>figure dl>dd{
+  font:16px '나눔고딕',sans-serif;
+  color:#fff;
+  margin-bottom:20px;
+  border-bottom:1px dotted #fff;
+}
+
+#mClose{
+position:fixed;
+width:50px;
+height:50px;
+top:50px;
+right:50px;
+background-color:orange;
+}
+#mClose>span{
+  position:absolute;
+  left:0; top:50%;
+  width:100%;
+  height:3px;
+  background-color:#fff;
+}
+#mClose>span:nth-child(1){
+  transform:rotate(-135deg) translateX(0%);
+}
+#mClose>span:nth-child(2){
+  transform:rotate(-45deg) translate(0%);
+}
+

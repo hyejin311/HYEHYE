@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* 가변이미지 */
+img{
+/* width:100%; */
+max-width:100%;
+}
+
+div#box{
+width:80%;
+/* 1200px; */
+height:550px;
+margin:0 auto;
+background-color: pink;
+}
+
+section#s_box01{
+/* 반올림, 반내림 절대 안됨 */
+
+width:81.6666666%;
+/* 980px; -> 980/1200 x 100 */
+height:500px;
+float:left;
+background-color:rgb(167, 161, 161);
+}
+
+.par_01{
+width:61.22448979591837%;
+/* 600px; */
+height:450px;
+float:left;
+background-color: orange;
+}
+
+.par_02{
+width:38.77551020408163%;
+/* 380px; */
+height:450px;
+float:left;
+background-color: green;
+}
+
+section#s_box02{
+  /* 얘는 부모가 div임. 1200px */
+width:18.33333333333%;
+/* 220px; */
+height:500px;
+float: left;
+background-color: #333;
+}

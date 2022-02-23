@@ -38,7 +38,9 @@ header>ul>li>a{
 
 header>ul>li>a:hover{color: seagreen;}
 
-main>article{padding-top:2px;}
+main>article{
+padding-top:2px;
+position: relative;}
 
 main>article>h2.center{
 background-color: peachpuff;
@@ -63,45 +65,117 @@ padding: 20px;
   margin: 0 auto;
 }
 
-#Nav>h3 ul{
-  position:relative;
-  font-size: 15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: plum;
-  /* width:100px; */
-  /* margin: auto; */
-  /* padding: 20px 0; */
-  /* display: flex; flex-wrap:wrap; justify-content: center; */
+#Nav ul{
+margin-top:30px;
+display: flex;
+flex-wrap:wrap;
+align-items: center;
+justify-content: center;
 }
 
-#Nav>ul>li{
-  position:absolute;
-  width:100px;
-  margin: auto;
-  padding: 20px 0;
-  display: flex; flex-wrap:wrap; justify-content: center;
+#Nav ul li{
+  padding-right: 30px;
+}
+
+#Nav ul li a{
+  font-size:20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: pink;
 }
 
 section.box02{
-  width: 800px; height:300px;
-  background-color:rgb(242,242,242);
+  width: 70%; height:200px;
+  background-color:papayawhip;
+  margin:auto;
+  margin-bottom: 30px;
   padding: 25px 0;
   text-align:center;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 section.box02 figure{
   width: 200px;
-  background-color:rgb(242,242,242);
   padding: 25px 0;
-  text-align:center;
 }
 
 section.box02 figure img{
+width: 150px;
 margin-bottom: 10px;
 font: bold 17px Arial,sans-serif;
 text-align: center;
-color:rgb(102,102,102);
+}
+
+section.box02 figure figcaption{
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: plum;
+}
+
+#nemo{
+background-color: pink;
+position:absolute;
+right:5%; top:95%;
+width:30px; height:30px;
+}
+
+div#Footer{
+  position:relative;
+  background-color: peachpuff;
+  /* width:100%; */
+  height:130px;
+  padding:20px 100px;
+  margin: 0 auto;
+  }
+
+div#Footer h4{
+  font: bold 10px/20px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: green;
+  letter-spacing: 5px;
+}
+
+div#Footer address section.left{
+  position:absolute;
+  left:20px; top:50px;
+  width:45%; height:110px;
+  border-right: 2px solid white;
+  margin-right:50px;
+}
+
+div#Footer address section.left dd{
+  font: bold 10px/25px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: white;
+  width:300px;
+  margin-bottom:15px;
+  margin-left:100px;
+  color: rgb(64, 64, 64);
+  text-align:start;
+  padding-left:20px;
+}
+
+div#Footer address section.right{
+  position:absolute;
+  right:20px; top:50px;
+  width:45%; height:110px;
+}
+
+div#Footer address section.right dl{
+  font: bold 13px/20px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width:500px;
+  color: rgb(64, 64, 64);
+  border:1px dotted red;
+  /* float:right; */
+}
+
+div#Footer address section.right dl dd{
+  }
+
+div#Ground{
+  background-color: sandybrown;
+  color:white;
+  /* 모니커 봐가면서 px 맞춤. 나쁜 예 */
+  margin-top:130px;
+  font: bold 15px/20px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
 }

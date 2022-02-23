@@ -24,6 +24,7 @@ display:none;
 <p><button class="btn01">콜백함수 사용 안함</button></p>
 <p class="back back01"></p>
 </div>
+
 <div id="box02">
 <p><button class="btn02">콜백함수 사용</button></p>
 <p class="back back02"></p>
@@ -31,20 +32,20 @@ display:none;
 </section>
 
 <script>
-$(function(){
-  //콜백함수 사용 X : slideDown -> style 변경//
-  $('.btn01').on('click',function(e){
-    $('.back01').slideDown(500);
-    $('.back01').css('background-color','yellow');
-    });
+//콜백함수 사용 X : slideDown -> style 변경//
+ $(function(){
+   $('.btn01').on('click',function(e){
+     $('p.back01').slideDown(1000);
+     $('p.back').css('backgroundColor','pink');
+   });
 
-    //콜백함수 사용//
-    $('.btn02').on('click',function(e){
-      $('.back02').slideDown(500,function(){
-        $(this).css('background-color','green');
-      });
+ //콜백함수 사용//
+  $('.btn02').on('click',function(e){
+    $('p.back02').slideDown(1000,function(){
+      $(this).css('backgroundColor','black');
     });
   });
+});
 </script>
 </body>
 </html>

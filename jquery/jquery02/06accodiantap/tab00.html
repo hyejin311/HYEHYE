@@ -38,22 +38,22 @@
 </div>
 
 <script>
-  $(function(){
-    // 준비하기//
-   $('.tab>li:first>a').addClass('selected');
-   $('.content>li:not(:first)').hide();
-   $('.tab>li>a').on('click',function(e){
-     let str = $(this).attr('href');
-     console.log(str);
+$(function(){
+// 준비하기//
+$('.tab>li:first>a').addClass('selected');
+$('.content>li:not(:first)').hide();
+$('.tab>li>a').on('click',function(e){
+let str = $(this).attr('href');
+console.log(str);
      
-     $('.content>li').hide();
-     $(str).show();
+$('.content>li').hide();
+$(str).show();
 
-     $('.tab>li>a').removeClass('selected');
-     $(this).addClass('selected');
-     return false;
-   });
-  })
+$('.tab>li>a').removeClass('selected');
+$(this).addClass('selected');
+return false;
+});
+})
 </script>
 </body>
 </html>

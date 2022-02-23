@@ -14,10 +14,10 @@
 	<img src="pic/flw_01.jpg" alt="이미지01" width="800px">
   </div>
   <!--작은이미지 목록-->
-  <div id="all">
-  <p id="prev"><img src="pic/prev.png" width="23" height="23"></p>
-  <p id="next"><img src="pic/next.png" width="23" height="23"></p>
-  <div id="show_view">
+<div id="all">
+<p id="prev"><img src="pic/prev.png" width="23" height="23"></p>
+<p id="next"><img src="pic/next.png" width="23" height="23"></p>
+<div id="show_view">
 
 <ul>
 <li><a class="smallImage" href="pic/flw_01.jpg">
@@ -36,18 +36,17 @@
 <script>
 $(function(){
 $('#prev').on('click',function(e){
+  $('li:last').prependTo('ul');
+  });
+});
+$('#next').on('click',function(e){
 $('li:first').appendTo('ul');
 });
 
-$('#next').on('click',function(e){
-$('li:last').prependTo('ul');
-});
-
 $('li>a').on('click',function(e){
-  let pic= $(this).attr('href');
+  let pic = $(this).attr('href');
   $('#bigImage>img').attr('src',pic);
-  return false;
-});
+return false;
 });
 </script>
 </body>

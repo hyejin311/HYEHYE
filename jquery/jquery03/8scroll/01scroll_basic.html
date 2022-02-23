@@ -4,23 +4,40 @@
 <meta charset="utf-8">
 <title>JQuery</title>
 <style type="text/css">
-body { margin:0; font: 30px "나눔고딕"; color:#999;
-			width:2000px;}
-a { text-decoration:none; color:#fc6; }
+body{
+margin:0; font: 30px "나눔고딕";
+color:#999;
+width:2000px;}
+a{text-decoration:none; color:#fc6; }
 
 #wrap { width:600px; background:#ffc; }
 #top { position:fixed; right:50px; bottom:100px; background:#333; }
 #tTop {width:100px; position:fixed; right:0; top:0; z-index:100; background:#f39; color:#ff0; padding:7px;box-sizing:border-box; text-align:center; font-size:16px;}
 #tLeft {width:100px; position:fixed; right:120px; top:0; z-index:100; background:#f39; color:#ff0; padding:7px;box-sizing:border-box; text-align:center;font-size:16px;}
 </style>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+      //set
+// $('html,body').scrollTop(2000);
+// $(document).scrollLeft(800);
 
+//set 보다는 get 개념을 더 자주 사용함.//
+$('#tTop').on('click',function(e){
+$('html,body').scrollTop(1500);
+});
+
+$('tLeft').on('click',function(e){
+$('html,body').scrollLeft(400);   
+});
+});
+</script>
 </head>
 
 <body>
 <div id="tTop">scrollTop</div> 
 <div id="tLeft">scrollLeft</div> 
 <div id="wrap">
-      
       Design
       
       1. 
@@ -329,9 +346,3 @@ a { text-decoration:none; color:#fc6; }
 </script>
 </body>
 </html>
-
-
-
-
-
-

@@ -12,13 +12,31 @@ a { text-decoration:none; color:#fc6; }
 #top { position:fixed; right:50px; bottom:100px; background:#333; }
 #tt { position:fixed; left:0; top:0; z-index:100; background:#f39; color:#ff0; padding:7px; }
 </style>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+$(window).on('scroll',function(e){
+let num = $('html,body').scrollTop();
+$('#tt').text(num);
+console.log(num);
 
+if(num < 1500){
+$('body').css('backgroundColor','yellow');
+}else if(num >=1500 && num <=5000){
+$('body').css('background-color','orange');
+}else if(num >=5000 && num <=7500){
+$('body').css('backgroundColor','green');
+}else{
+$('body').css('background-color','skyblue');
+};
+});
+});
+</script>
 </head>
 
 <body>
 <div id="tt">text</div> 
 <div id="wrap">
-      
       Design
       
       1. 

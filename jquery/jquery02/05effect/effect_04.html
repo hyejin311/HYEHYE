@@ -19,17 +19,15 @@ p{width:150px; height:150px; background:red;
 
 <script>
 $(function(){
-$('#btn').on('click',function(e){
-$('p').animated({left:'100px'},1000);
-
-$('#btn01').on('click',function(e){
-$('p').animated({left :'+=300px'},1000);
-
-$('#btn02').on('click',function(e){
-$('p').animated({backgroundColor: 'blue'},1000);
-});
-});
-});
+	$('#btn').on('click',function(e){
+		$('p').animate({left : '+=100px'},500)
+	});
+	$('#btn01').on('click',function(e){
+		$('p').animate({left: '+=300px'},500)
+	});
+	$('#btn02').on('click',function(e){
+		$('p').animate({backgroundColor:'pink'})
+	});
 });
 </script>
 </body>

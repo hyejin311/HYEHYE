@@ -17,11 +17,11 @@
 
 <script>
 $(function(){
-$('li>a').on('click',function(e){
-let pic= $(this).attr('href');
-$('p>img').attr('src',pic);
-return false;
-});
+  $('li>a').on('click',function(e){
+    let pic= $(this).attr('href');
+    $('#back_img').attr('src',pic);
+    return false;
+  });
 });
 </script>
 </body>

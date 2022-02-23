@@ -1,24 +1,40 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>속성가져오기</title>
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
+<meta charset="UTF-8">
+<title>속성가져오기(fade gallery)</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/test.css">
+<script src="../../../js/jquery-3.6.0.min.js"></script>
+<script src="../../../js/jquery-ui.min.js"></script>
 </head>
+
 <body>
 <section>
-        <figure>
-          <img src="images/flower05.jpg" alt="flower02">
-            <figcaption class="text">이미지명</figcaption></figure>
+<figure>
+<img src="images/flower05.jpg" alt="flower02">
+<figcaption>flower01</figcaption></figure>
+
 <ul>
-    <li><img src="images/flower01.jpg" alt="flower01"></li>
-    <li><img src="images/flower02.jpg" alt="flower02"></li>
-    <li><img src="images/flower03.jpg" alt="flower03"></li>
-    <li><img src="images/flower04.jpg" alt="flower04"></li>
-</ul>
+<li><img src="images/flower01.jpg" alt="flower01"></li>
+<li><img src="images/flower02.jpg" alt="flower02"></li>
+<li><img src="images/flower03.jpg" alt="flower03"></li>
+<li><img src="images/flower04.jpg" alt="flower04"></li></ul>
 </section>
 
 
+<script>
+$(function(){
+$('ul>li>img').on('click',function(e){
+  let pic=$(this).attr('src');
+$('section>figure>img').attr('src',pic);
+});
 
+$('section>figure>img').on('fadeOut',500(function(e){
+  let fade =$(this).attr('src');
+  $('ul>li>img').attr('src',fade);
+}));
+})
+</script>
 </body>
 </html>

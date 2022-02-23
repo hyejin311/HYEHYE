@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+div{
+width:20vw;
+height:20vw;
+background-color: green;
+margin: 0 5vw;
+float:left;
+border-radius: 50%;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>val</title>
+<style>
+span {display: none;}
+</style>
+<script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<p><input type="text"> <span>focus fire</span></p>
+<p><input type="password"> <span>focus fire</span></p>
+
+<script>
+  $(function(){
+//focus -> 필요시간 외에는 사라지게//
+//focus => inline-> fadeOut;
+$('input').on('focus',function(e){
+  $(this).next()
+  .css('display','inline')
+  .delay(1000)
+  .fadeOut(700);
+});
+});
+    // $('input').on('focus',function(e){
+    //   $(this).next().fadeIn(500);
+    //   $(this).next().css('display','inline');
+    // });
+    // $('input').on('blur',function(e){
+    //     $(this).next().fadeOut(500);
+    //   });
+</script>
+</body>
+</html>

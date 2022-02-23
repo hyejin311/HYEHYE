@@ -11,7 +11,7 @@
 <body>
 <ul>
 <li><a href="img/img_01.jpg" class="modal">
-  <img src="img/img_01.jpg" width="140" height="105" ></a></li>
+  <img src="img/img_01.jpg" width="140" height="105"></a></li>
 <li><a href="img/img_02.jpg" class="modal">
   <img src="img/img_02.jpg" width="140" height="105"></a></li>
 <li><a href="img/img_03.jpg" class="modal">
@@ -31,34 +31,30 @@
 
 <script>
 $(function(){
-//1. 준비하기//
-$('body').append('<div id ="back"></div><div id ="main"></div>');
-$('li>a').on('click',function(e){
-let pic= $(this).attr('href');
-console.log(pic);
+  $('body').append('<div id="back"></div><div id="main"></div>');
+  
+  $('li>a').on('click',function(e){
+    let pic= $(this).attr('href');
+    console.log(pic);
+    
+    $('#back').show();
+    $('#main').show().html('<img src="'+pic+'" alt="상세이미지">');
+    let mainWidth = $('#main').width()/2;
+    let mainHeight =$('#main').height()/2;
 
-$('#back').show();
-$('#main').show().html('<img src= "'+pic+'" alt="상세이미지">');
-// console.log($('#main').width());
-// console.log($('#main').css('width'));
-let mainWidth =$('#main').width()/2;
-let mainHeight = $('#main').height()/2;
-
-//css 속성 : 200px;//
-$('#main').css({
-marginLeft : '-'+mainWidth+'px',
-marginTop : '-'+mainHeight+'px'
+    $('#main').css({
+    marginLeft : '-'+mainWidth+'px',
+    marginTop: '-'+mainHeight+'px'
+    // let mainWidth : $(this).width()/2,
+    // let mainHeight : $(this).height()/2
+    });
+    return false;
+  });
+    $('#back').on('click',function(e){
+      $(this).hide();
+      $('#main').hide();
+      });
 });
-
-return false;
-});
-
-$('#back').click(function(e){
-$(this).hide();
-$('#main').hide();
-
-});
-})
 </script>
 </body>
 </html>

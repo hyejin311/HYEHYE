@@ -1,3 +1,36 @@
 @charset "UTF-8";
 /* CSS Document */
+div#all{
+position: relative;
+}
 
+p#prev{
+  position:absolute;
+  left:-30px; top:50%;}
+
+p#next{
+  position:absolute;
+  right:-30px; top:50%;}
+
+div#show{
+  position:relative;
+  margin:100px auto;
+  background-color: olivedrab;
+  width:800px; height:250px;
+  border:5px double green;
+}
+
+div#show>ul{
+  display: flex;
+  flex-wrap: nowrap;
+  width:800px; height:200px;
+  position:absolute;
+  padding:25px 0;
+}
+/* 
+div#show.page1>li{
+  width:100px; height:100px;
+  position:absolute;
+  margin:auto 0;
+  padding-right: 10px;
+} */

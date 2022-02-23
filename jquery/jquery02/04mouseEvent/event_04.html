@@ -17,13 +17,13 @@
 
 <script>
 $(function(){
-$('li>a').dblclick(function(e){
-  let pic=$(this).attr('href');
-  $('#back_pic>img').attr('src',pic);
-})
+  $('li>a').dblclick(function(e){
+    let pic=$(this).attr('href');
+    $('#back_pic>img').attr('src',pic);
+  })
   .click(function(e){
     return false;
-});
+  });
 });
 </script>
 </body>

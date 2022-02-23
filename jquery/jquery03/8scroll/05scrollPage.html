@@ -5,8 +5,9 @@
 <title>scroll</title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/scroll01.css">
-
+<script src="../../js/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 <p id="test"></p>
 <div id="wrap">
@@ -42,16 +43,31 @@
 <!--footer-->	
 	<footer>footer</footer>
 </div>
+
 <script>
 $(function(){
-$('nav ul>li>a').on('click',function(){
-	var room = $(this).attr('href');
-	var thidId = $(room).offset().top;
-$('html,body').animate({scrollTop:thidId-60},400,'swing');
-//
+
+//1.height 값 정리하기//
+let wHeight= $(window).heigth();
+console.log(wHeight);
+$('section').height(wHeight);
+
+//2. a-> click 
+	$('nav>ul>li>a').on('click',function(e){
+
+//3. href 값//
+let aHref= $(this).attr('href');
+console.log(aHref);
+
+//4. 위치값 가져오기//
+let sTop= $(aHref).offset().top;
+console.log(sTop);
+
+//5. animate 작동//
+$('html,body').animate({scrollTop:sTop-60},500)
 return false;
-});
 	});
+});
 </script>
 </body>
 </html>

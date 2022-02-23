@@ -1,0 +1,38 @@
+/* rem -> 자신의 크기/최상위 크기 */
+
+html{font-size:18px;}
+
+body{
+background: #e3e0d9;
+color: #000;
+}
+
+/* font-size:34px */
+div{
+font-size:
+/* 34px; */
+1.888888888888rem;
+}
+
+/* 55px */
+ h1{
+font-size:
+/* 55px */
+3.0555555555555rem;
+}
+
+ /* 24px */
+ h1>span{
+font-size:
+ /* 24px */
+1.333333333333rem;
+}
+
+ div>p{
+font-size:
+ /*25px  */
+1.38888888888rem;
+}
+
+ /*32px*/
+ div>p>span{}

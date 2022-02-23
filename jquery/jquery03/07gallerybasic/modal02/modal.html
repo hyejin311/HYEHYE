@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prtfolio</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/modal.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prtfolio</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/modal.css">
+<script src="../../../js/jquery-3.6.0.min.js"></script>
+<script src="../../../js/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -16,21 +18,17 @@
 <div>
 <ul>
 <li>
-<figure>
-<img src="images/pic01.png" alt="작품1">
+<figure><img src="images/pic01.png" alt="작품1">
 <figcaption>
-
 <dl>
 <dt>title1</dt>
-<dd>work01 Offical Site Design Renewal & Coding</dd>
-</dl>
+<dd>work01 Offical Site Design Renewal & Coding</dd></dl>
 </figcaption>
 </figure>
 </li>
 
 <li>
-<figure>
-<img src="images/pic02.png" alt="작품1">
+<figure><img src="images/pic02.png" alt="작품1">
 <figcaption>
 <dl>
 <dt>title2</dt>
@@ -41,8 +39,7 @@
 </li>
 
 <li>
-<figure>
-<img src="images/pic03.png" alt="작품1">
+<figure><img src="images/pic03.png" alt="작품1">
 <figcaption>
 <dl>
 <dt>title3</dt>
@@ -58,19 +55,44 @@
 <section id="modal">
 <div>
 <h3>title</h3>
-<figure>
-<img src="images/pic01.png" alt="작품명">
+<figure><img src="images/pic01.png" alt="작품명">
 <figcaption>
 <dl>
 <dt>제작년도</dt>
-<dd>?????</dd>
+<dd>1997</dd>
 <dt>사용프로그램</dt>
-<dd>???????</dd>
+<dd>html</dd>
 <dt>설명</dt>
-<dd>??????????</dd>
+<dd>1</dd>
 </dl>
 </figcaption>
 </figure>
+
+<figure><img src="images/pic02.png" alt="작품명">
+  <figcaption>
+  <dl>
+  <dt>제작년도</dt>
+  <dd>2007</dd>
+  <dt>사용프로그램</dt>
+  <dd>css</dd>
+  <dt>설명</dt>
+  <dd>2</dd>
+  </dl>
+  </figcaption>
+  </figure>
+
+  <figure><img src="images/pic03.png" alt="작품명">
+    <figcaption>
+    <dl>
+    <dt>제작년도</dt>
+    <dd>2022</dd>
+    <dt>사용프로그램</dt>
+    <dd>javascript</dd>
+    <dt>설명</dt>
+    <dd>3</dd>
+    </dl>
+    </figcaption>
+    </figure>
 </div>
 
 <p id="mClose">
@@ -80,5 +102,63 @@
 </section>
 </div>
 
+<script>
+function Course(year,text1,text2){
+  this.year=year;
+  this.text1=text1;
+  this.text2=text2;
+}
+
+Course.prototype.action= function(){
+  innerHTML(
+    `
+    제작년도:${this.year},
+    사용프로그램: ${this.text1}
+    설명:${this.text2}
+    `
+  );
+}
+
+let source=[
+  new Course('1997','html','1'),
+  new Course('2005','css','2'),
+  new Course('2022','javascript','3'),
+]
+
+// for(let i of source){
+//     i.action();
+// }
+
+$(function(){
+  $().forEach()
+})
+
+
+
+$(function(){
+$('#box03>article ul>li>figure>img').on('click',function(e){
+let pic=$(this).attr('src');
+console.log(pic);
+$('#modal>div').attr(pic);
+
+$('#modal').show();
+// let Hpic=$(this).html();
+// console.log(Hpic);
+$('#modal>div').show().html('<img src="'+pic+'" alt="상세이미지">');
+let mainWidth= $('#modal>div').width()/2;
+let mainHeight=$('#modal>div').height()/2;
+
+$('#modal>div').css({
+marginLeft : '-'+mainWidth+'px',
+marginTop: '-'+mainHeight+'px'
+});
+});
+
+$('#modal').on('click',function(e){
+$(this).hide();
+$('#modal>div').hide();
+});
+})
+</script>
 </body>
 </html>

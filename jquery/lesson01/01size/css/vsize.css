@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+div{
+background-color:red;
+width:70vw;
+height:80vh;
+}
+
+p{
+background-color:blue;
+width:40vw;
+height:80vh;
+}

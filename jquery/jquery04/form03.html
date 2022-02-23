@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>val</title>
+<script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <!-- <input type="text" placeholder="값을 넣어주세요"> -->
+<input type="text" value="some text">
+<p></p>
+
+<script>
+  $(function(){
+    // $('input').keyup,(function(){}
+    $('input').on('keyup',function(e){
+    let str= $(this).val();
+    $('p').text(str);
+    });
+
+    // $('input').blur(function(){}
+    $('input').on('blur',function(e){
+      //value -> 수정 some text//
+      $(this).val('some text');
+      //p 비우기//
+      $('p').empty();
+    });
+  });
+</script>
+</body>
+</html>

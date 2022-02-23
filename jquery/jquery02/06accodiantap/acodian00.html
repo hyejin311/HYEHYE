@@ -27,22 +27,12 @@
 
 <script>
 $(function(){
-     //준비하기//
-$('dd:not(:first)').hide();
-$('dt:first').addClass('selected');
-$('dt').on('click',function(e){
+  $('dd:not(:first)').hide();
+  $('dt:first').addClass('selected');
 
-//내가 클릭한 dt 다음의 dd display none//
-let str = $(this).next('dd').css('display');
-if(str == none){
-
-//조건 -> 실행//
-$('dt.selected').next('dd').slideUp(300);
-$(this).next('dd').slideDown(300);
-$('dt').removeClass('selected');
-$(this).addClass('selected');
-}
-});
+  $('dt').on('click',function(e){
+    
+  })
 });
 </script>
 </body>

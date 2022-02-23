@@ -5,6 +5,8 @@
 <title>아코디언가로</title>
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/acodian02.css" rel="stylesheet">
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script src="../../js/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -21,21 +23,21 @@
 
 <script type="text/javascript">
 $(function(){
-  //1.준비하기//
+//1.준비하기//
+$('dt:first').addClass('selected');
+$('dd:not(:first)').css('width','0');
 
-  $('dt:first').addClass('selected');
-  $('dd:not(:first)').css('width','0');
-  $('dt').on('click',function(e){
+$('dt').on('click',function(e){
+let ddWidth = $(this).next().css('width');
+console.log(ddWidth);
 
-    let ddWidth = $(this).next().css('width');
-    console.log(ddWidth);
-    if(ddWidth == '0px'){
-      $('dt.selected').next('dd').animate({width: '0'},300);
-      $(this).next('dd').animate({width: '500px'},300);
-      $('dt').removeClass('selected');
-      $(this).addClass('selected');
-    }
-  });
+if(ddWidth == '0px'){
+$('dt.selected').next('dd').animate({width: '0'},300);
+$(this).next('dd').animate({width: '500px'},300);
+$('dt').removeClass('selected');
+$(this).addClass('selected');
+}
+});
 });
 </script>
 </body>
