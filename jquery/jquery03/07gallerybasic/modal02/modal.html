@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prtfolio</title>
+<title>Portfolio</title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/modal.css">
 <script src="../../../js/jquery-3.6.0.min.js"></script>
@@ -103,62 +103,54 @@
 </div>
 
 <script>
-function Course(year,text1,text2){
+  const Btn=document.querySelectorAll('#modal>figure');
+  const Year = document.querySelectorAll('dl>dt:nth-of-type(1)');
+  const Text1 = document.querySelectorAll('dl>dt:nth-of-type(2)');
+  const Text2 = document.querySelectorAll('dl>dt:nth-of-type(2)');
+
+  //객체 생성//
+function Picture(year,text1,text2){
   this.year=year;
   this.text1=text1;
   this.text2=text2;
 }
 
-Course.prototype.action= function(){
-  innerHTML(
+//매서드 생성//
+Picture.prototype.action= function(){
+  document.querySelectorAll(
     `
-    제작년도:${this.year},
-    사용프로그램: ${this.text1}
-    설명:${this.text2}
+    <dl>
+    <dt>${Year}}</dt>
+    <dd>${this.year}</dd>
+    <dt>${Text1}</dt>
+    <dd>${this.text1}</dd>
+    <dt>${Text2}</dt>
+    <dd>${this.text2}</dd>
+    </dl>
     `
-  );
-}
+  );}
 
+//인스턴스//
 let source=[
-  new Course('1997','html','1'),
-  new Course('2005','css','2'),
-  new Course('2022','javascript','3'),
+  new Picture('../images/pic01.png','제작년도','사용프로그램','설명'),
+  new Picture('../images/pic02.png','제작년도','사용프로그램','설명'),
+  new Picture('../images/pic03.png','제작년도','사용프로그램','설명')
 ]
 
-// for(let i of source){
-//     i.action();
-// }
+function Play(e){
+  let num= this.getAttribute('figcaption');
+  source[num].action();
+}
 
-$(function(){
-  $().forEach()
-})
-
-
-
-$(function(){
-$('#box03>article ul>li>figure>img').on('click',function(e){
-let pic=$(this).attr('src');
-console.log(pic);
-$('#modal>div').attr(pic);
-
-$('#modal').show();
-// let Hpic=$(this).html();
-// console.log(Hpic);
-$('#modal>div').show().html('<img src="'+pic+'" alt="상세이미지">');
-let mainWidth= $('#modal>div').width()/2;
-let mainHeight=$('#modal>div').height()/2;
-
-$('#modal>div').css({
-marginLeft : '-'+mainWidth+'px',
-marginTop: '-'+mainHeight+'px'
-});
+Btn.forEach(function(Btn){
+  Btn.onclick= Play;
 });
 
-$('#modal').on('click',function(e){
-$(this).hide();
-$('#modal>div').hide();
-});
-})
+//작동//
+// Picture.forEach(function(pic){
+//   Picture.addEventListener('click',source);
+// });
+
 </script>
 </body>
 </html>

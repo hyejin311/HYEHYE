@@ -25,15 +25,15 @@
 
 <script>
 $(function(){
-$('ul>li>img').on('click',function(e){
-  let pic=$(this).attr('src');
-$('section>figure>img').attr('src',pic);
-});
+  $('li>img').on('click',function(e){
+    let pic = $(this).attr('src');
+    $('figure>img').attr('src',pic);
 
-$('section>figure>img').on('fadeOut',500(function(e){
-  let fade =$(this).attr('src');
-  $('ul>li>img').attr('src',fade);
-}));
+    $('figure>img:last').fadeOut(500,function(){
+      $('figure>img:first').fadeIn();
+    });
+  });
+  return false;
 })
 </script>
 </body>
