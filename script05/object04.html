@@ -14,16 +14,17 @@ let Art = {
     pic : 'images/pic01.jpg',
     artist : '마르크 샤갈',
     year : 1938,
-    Paint : function(){
-        document.write(
-            `<dl>
-                <dt>${Art.title}</dt>
-                <dd><img src="${Art.pic}".jpg alt="${Art.title}"></dd>
-                <dd>${Art.artist}</dd>
-                <dd>${Art.year}</dd>
-                </dl>`
-        );
-    }}
+Paint : function(){
+document.write(
+`
+<dl>
+<dt>${Art.title}</dt>
+<dd><img src="${Art.pic}".jpg alt="${Art.title}"></dd>
+<dd>${Art.artist}</dd>
+<dd>${Art.year}</dd>
+</dl>`
+);
+}}
 Art.Paint();
 </script>
 

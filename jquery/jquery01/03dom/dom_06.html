@@ -35,21 +35,18 @@ $(function(){
 </script> -->
 
 <script>
-$(function(){
-let i = 2;
+$(function(e){
+	i =2;
 $('#btn01').click(function(e){
 console.log(i);
 
-if(i>7){
-i=1;}
-
-let pic = 'images/pic'+i+'.jpg';
+if(i>7){i=1;}
+let pic= 'images/pic'+i+'.jpg';
 $('.box01>img').attr('src',pic);
 $('p.test').text(i);
-i++;
-console.log(i);
+i++
 });
-});
+})
 </script>
 </body>
 </html>

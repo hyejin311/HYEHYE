@@ -14,26 +14,25 @@ Art.title= '에펠탑의 신랑신부';
 Art.pic= 'images/pic01.jpg';
 Art.artist= '마르크 샤갈';
 Art.year= 1938;
-Art.museum= function(){
-    document.write(
-        `<dl>
-            <dt>${Art.title}</dt>
-            <dd><img src="${Art.pic}".png alt="${Art.title}"></dd>
-            <dd>${Art.artist}</dd>
-            <dd>${Art.year}</dd>
-            </dl>`
-    );
-}
-Art.museum();
 
+Art.museum= function(){
+document.write(
+`<dl>
+<dt>${Art.title}</dt>
+<dd><img src="${Art.pic}".png alt="${Art.title}"></dd>
+<dd>${Art.artist}</dd>
+<dd>${Art.year}</dd>
+</dl>`
+);}
+Art.museum();
 </script>
 
-    <dl>
-        <dt>에펠탑의 신랑신부</dt>
-        <dd>
-            <img src="images/pic01.jpg" alt="에펠탑의 신랑신부"></dd>
-            <dd>마르크 샤갈</dd>
-            <dd>1938</dd>
-    </dl>
+<dl>
+<dt>에펠탑의 신랑신부</dt>
+<dd>
+<img src="images/pic01.jpg" alt="에펠탑의 신랑신부"></dd>
+<dd>마르크 샤갈</dd>
+<dd>1938</dd>
+</dl>
 </body>
 </html>
