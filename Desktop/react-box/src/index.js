@@ -1,16 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { FaAngellist } from "react-icons/fa";
+//source
 import './index.css';
+import {FaAngellist} from "react-icons/fa"
+
+//component
+import AddApointment from './components/AddApointment';
+import Search from './components/Search';
 
 function App(){
   return(
     <article>
       <h3>
-      <FaAngellist style={{color:'pink'}}/>
+      <FaAngellist style={{color:'pink'}} /> 
+      예약 시스템
       </h3>
-      welcome
+<AddApointment />
+<Search />
+<div id="list">
+  <ul>
+    <li>반복문</li>
+  </ul>
+</div>
     </article>
   )
 }
